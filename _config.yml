@@ -1,4 +1,13 @@
 theme: minima
 
 title: Markus Lippert
+author: Markus Lippert
 description: Some projects, thoughts and other interesting stuff
+
+twitter_username: lippert_markus
+github_username:  lippertmarkus
+facebook_username: lippertmarkus
+linkedin_username: lippertmarkus
+rss: RSS
+
+show_excerpts: true
