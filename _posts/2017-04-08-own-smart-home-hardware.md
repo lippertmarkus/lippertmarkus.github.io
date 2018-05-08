@@ -43,7 +43,7 @@ You may already have laying around some of the parts or can salvage them from ol
 
 After some breadboard prototyping I layed out a schematic in [EasyEDA](https://easyeda.com/) and created my first PCB ever (don't blame me for using autorouter). You can find the layout and the PCB [here](https://easyeda.com/markus9656/ESP_Managed-83b3b148fb944862be8a27f48f32800a). If you wonder why I'm running my ESP with 5V instead of the recommended 3.3V: My ESPs were much more stable while running them with 5V and there are definitely much more things that can be improved in my schematic.
 
-![Schematic](/assets/posts/own-smart-home-hardware/Schematic.png)
+![Schematic](/assets/posts/own-smart-home-hardware/Schematic.png){:height="36px" width="36px"} ![PCB](/assets/posts/own-smart-home-hardware/PCB.png)
 
 Although the holes are too close to the edges of the PCB and the resistor underneath the pushbutton is a bit too close to the microUSB port, the PCB came out pretty well for my first try. I ordered 5 pieces of the PCB at [Elecrow](https://www.elecrow.com/pcb-manufacturing.html) for less than $10. After soldering, I also created a little box for my project and printed it out with a 3D-printer of a friend.
 
