@@ -24,29 +24,31 @@ As a little motivation, the parts list:
 |---------------------------------------+------------------|
 | Part                                  |          Price $ |
 |:--------------------------------------|-----------------:|
-| ESP8266 ESP-12F                       |         1x $1.75 |
-| DHT11 (temperature & humidity)        |         1x $1.26 |
-| 433MHz Transmitter (wireless sockets) |         1x $0.62 |
-| 433MHz Antenna (or build yourself)    |         1x $0.20 |
-| microUSB Connector                    |         1x $0.11 |
-| Motion Sensor                         |         1x $0.78 |
-| Pushbutton                            |         1x $0.01 |
-| Magnetic Contact (windows/doors, ..)  |         1x $0.60 |
-| IR LED (for TV, sound system, ..)     |         1x $0.05 |
+| [ESP8266 ESP-12F](https://de.aliexpress.com/item/2015-New-version-1PCS-ESP-12F-ESP-12E-upgrade-ESP8266-remote-serial-Port-WIFI-wireless-module/32643052680.html?spm=2114.13010608.0.0.OhXPw2)                       |         1x $1.75 |
+| [DHT11](https://de.aliexpress.com/item/Free-Shipping-1x-DHT11-DHT-11-Digital-Temperature-and-Humidity-Temperature-sensor-for-Arduino-Hot/32243034419.html?spm=2114.13010608.0.0.wHWh79) (temperature & humidity)        |         1x $1.26 |
+| [433MHz Transmitter](https://de.aliexpress.com/item/RF-wireless-receiver-module-transmitter-module-board-for-arduino-super-regeneration-315-433MHZ-DC5V-ASK-OOK/1620400987.html?spm=2114.13010608.0.0.diau83) (wireless sockets) |         1x $0.62 |
+| [433MHz Antenna](https://de.aliexpress.com/item/Free-Shipping-10pcs-lot-433mhz-Copper-Spring-Antenna/32447827044.html?spm=2114.13010608.0.0.wHWh79) (or build yourself)    |         1x $0.20 |
+| [microUSB Connector](https://de.aliexpress.com/item/10pcs-MICRO-USB-to-DIP-Adapter-5pin-Female-Connector-B-Type-PCB-Converter/32720363831.html?spm=2114.13010608.0.0.wHWh79)                    |         1x $0.11 |
+| [Motion Sensor](https://de.aliexpress.com/item/Free-Shipping-HC-SR501-Adjust-Infrared-IR-Pyroelectric-Infrared-PIR-module-Motion-Sensor-Detector-Module-We/32519303005.html?spm=2114.13010608.0.0.OhXPw2)                         |         1x $0.78 |
+| [Pushbutton](https://de.aliexpress.com/item/50pcs-lot-6x6x6MM-4PIN-G91-Tactile-Tact-Push-Button-Micro-Switch-Direct-Self-Reset-DIP-Top/32668577698.html?spm=2114.13010608.0.0.OhXPw2)                            |         1x $0.01 |
+| [Magnetic Contact](https://de.aliexpress.com/item/Free-Shipping-5-pcs-MC-38-MC38-Wired-Door-Window-Sensor-Magnetic-Switch-Home-Alarm-System/32255881055.html?spm=2114.13010608.0.0.OhXPw2) (windows/doors, ..)  |         1x $0.60 |
+| [IR LED](https://de.aliexpress.com/item/100pcs-5mm-Infrared-IR-LED-Light-Emitting-Diode-Lamp-940nm-5-mm-Transparent-Water-Clear-Lens/32371513701.html?spm=2114.13010608.0.0.wHWh79) (for TV, sound system, ..)     |         1x $0.05 |
 | 1k Resistors                          |         3x $0.01 |
-| Wireless Socket (433 MHz)             |         1x $5.00 |
+| [Wireless Socket](https://www.pollin.de/p/funksteckdosen-set-mit-3-steckdosen-550666) (433 MHz)             |         1x $5.00 |
 |=======================================+==================|
-| Total                                 |            $9.41 |
+| **Total**                             |        **$9.41** |
 |---------------------------------------+------------------|
 
-You may already have laying around some of the parts or can salvage them from old stuff. I ordered most of them from AliExpress, where I also got the prices of the parts list from. For programming the ESP you also need an FTDI for less than $2.
+You may already have laying around some of the parts or can salvage them from old stuff. I ordered most of them from [AliExpress](https://www.aliexpress.com/), where I also got the prices of the parts list from. For programming the ESP you also need an [FTDI](https://de.aliexpress.com/item/Free-Shipping-1pcs-FT232RL-FTDI-USB-3-3V-5-5V-to-TTL-Serial-Adapter-Module/32481520135.html?spm=2114.13010608.0.0.wHWh79) for less than $2.
 
-After some breadboard prototyping I layed out a schematic in EasyEDA and created my first PCB ever (don't blame me for using autorouter). You can find the layout and the PCB here. If you wonder why I'm running my ESP with 5V instead of the recommended 3.3V: My ESPs were much more stable while running them with 5V and there are definitely much more things that can be improved in my schematic.
+After some breadboard prototyping I layed out a schematic in [EasyEDA](https://easyeda.com/) and created my first PCB ever (don't blame me for using autorouter). You can find the layout and the PCB [here](https://easyeda.com/markus9656/ESP_Managed-83b3b148fb944862be8a27f48f32800a). If you wonder why I'm running my ESP with 5V instead of the recommended 3.3V: My ESPs were much more stable while running them with 5V and there are definitely much more things that can be improved in my schematic.
 
-Although the holes are too close to the edges of the PCB and the resistor underneath the pushbutton is a bit too close to the microUSB port, the PCB came out pretty well for my first try. I ordered 5 pieces of the PCB at Elecrow for less than $10. After soldering, I also created a little box for my project and printed it out with a 3D-printer of a friend.
+![Schematic]({{ "/assets/posts/own-smart-home-hardware/Schematic.png" | absolute_url }})
+
+Although the holes are too close to the edges of the PCB and the resistor underneath the pushbutton is a bit too close to the microUSB port, the PCB came out pretty well for my first try. I ordered 5 pieces of the PCB at [Elecrow](https://www.elecrow.com/pcb-manufacturing.html) for less than $10. After soldering, I also created a little box for my project and printed it out with a 3D-printer of a friend.
 
 As running costs are also very interesting: The hardware used about 0,41W in my measurements. This results in around 1 € per year with average costs of 0.28 €/kWh for electricity in Germany.
 
-The firmware itself is using MQTT for communication. This allows easy and lightweight interfacing with various clients. You can find the source code on my GitHub (excuse my bad C/C++ skills). In my overall solution I communicate with the ESPs via OpenHAB 2.
+The firmware itself is using [MQTT](http://mqtt.org/) for communication. This allows easy and lightweight interfacing with various clients. You can find the source code on my [GitHub](https://github.com/lippertmarkus/esp8266-managed) (excuse my bad C/C++ skills). In my overall solution I communicate with the ESPs via [OpenHAB 2](https://www.openhab.org/).
 
 More details on the source code as well as the overall architecture of the project and OpenHAB will follow in future posts.
