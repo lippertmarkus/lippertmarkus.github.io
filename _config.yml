@@ -12,6 +12,8 @@ rss: RSS
 
 show_excerpts: true
 
+google_analytics: UA-NNNNNNNN-N
+
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
