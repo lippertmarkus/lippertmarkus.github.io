@@ -1,3 +1,7 @@
+---
+title: "Own Smart Home: Architecture"
+---
+
 After we had a look at the hardware, let's have a look at the overall architecture of the system. Consider reading my [first blog post]({% post_url 2017-04-08-own-smart-home-hardware %}) about this project to understand the background of the implementation.
 
 # Overview
