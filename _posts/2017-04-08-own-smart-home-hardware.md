@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Own Smart Home: Hardware"
 ---
 
