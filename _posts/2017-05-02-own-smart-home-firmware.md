@@ -49,6 +49,7 @@ Even with OTA support we need a way to install firmware the traditional way if w
 
 As shown in the [schematic]({% post_url 2017-04-08-own-smart-home-hardware %}), I connected the Tx and Rx pins with the data pins of the microUSB connector. That way, I can easily hook up my FTDI via microUSB to program it:
 
+{: .center}
 ![Uploader](/assets/posts/own-smart-home-firmware/uploader.jpg){:width="45%"}
 
 # Final Thoughts
