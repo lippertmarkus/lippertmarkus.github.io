@@ -14,37 +14,37 @@ The data protection declaration is based on the terms used by the European legis
 
 In this data protection declaration, we use, inter alia, the following terms:
 
-**a) Personal data**  
+### a) Personal data  
 Personal data means any information relating to an identified or identifiable natural person (“data subject”). An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
 
-**b) Data subject**  
+### b) Data subject  
 Data subject is any identified or identifiable natural person, whose personal data is processed by the controller responsible for the processing.
 
-**c) Processing**  
+### c) Processing  
 Processing is any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
 
-**d) Restriction of processing**  
+### d) Restriction of processing  
 Restriction of processing is the marking of stored personal data with the aim of limiting their processing in the future.
 
-**e) Profiling**  
+### e) Profiling  
 Profiling means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.
 
-**f) Pseudonymisation**  
+### f) Pseudonymisation  
 Pseudonymisation is the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.
 
-**g) Controller or controller responsible for the processing**  
+### g) Controller or controller responsible for the processing  
 Controller or controller responsible for the processing is the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law.
 
-**h) Processor**  
+### h) Processor  
 Processor is a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
 
-**i) Recipient**  
+### i) Recipient  
 Recipient is a natural or legal person, public authority, agency or another body, to which the personal data are disclosed, whether a third party or not. However, public authorities which may receive personal data in the framework of a particular inquiry in accordance with Union or Member State law shall not be regarded as recipients; the processing of those data by those public authorities shall be in compliance with the applicable data protection rules according to the purposes of the processing.
 
-**j) Third party**  
+### j) Third party  
 Third party is a natural or legal person, public authority, agency or body other than the data subject, controller, processor and persons who, under the direct authority of the controller or processor, are authorised to process personal data.
 
-**k) Consent**  
+### k) Consent  
 Consent of the data subject is any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
 
 ## 2. Name and Address of the controller
@@ -86,10 +86,10 @@ If the storage purpose is not applicable, or if a storage period prescribed by t
 
 ## 6. Rights of the data subject
 
-**a) Right of confirmation**  
+### a) Right of confirmation  
 Each data subject shall have the right granted by the European legislator to obtain from the controller the confirmation as to whether or not personal data concerning him or her are being processed. If a data subject wishes to avail himself of this right of confirmation, he or she may, at any time, contact the controller.
 
-**b) Right of access**  
+### b) Right of access  
 Each data subject shall have the right granted by the European legislator to obtain from the controller free information about his or her personal data stored at any time and a copy of this information. Furthermore, the European directives and regulations grant the data subject access to the following information:
 
 - the purposes of the processing;
@@ -104,12 +104,12 @@ Each data subject shall have the right granted by the European legislator to obt
 
 If a data subject wishes to avail himself of this right of access, he or she may, at any time, contact the controller.
 
-**c) Right to rectification**  
+### c) Right to rectification  
 Each data subject shall have the right granted by the European legislator to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.
 
 If a data subject wishes to exercise this right to rectification, he or she may, at any time, contact the controller.
 
-**d) Right to erasure (Right to be forgotten)**  
+### d) Right to erasure (Right to be forgotten)  
 Each data subject shall have the right granted by the European legislator to obtain from the controller the erasure of personal data concerning him or her without undue delay, and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies, as long as the processing is not necessary:
 
 - The personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed.
@@ -122,7 +122,7 @@ Each data subject shall have the right granted by the European legislator to obt
 
 Where the controller has made personal data public and is obliged pursuant to Article 17(1) to erase the personal data, the controller, taking account of available technology and the cost of implementation, shall take reasonable steps, including technical measures, to inform other controllers processing the personal data that the data subject has requested erasure by such controllers of any links to, or copy or replication of, those personal data, as far as processing is not required. The controller will arrange the necessary measures in individual cases.
 
-**e) Right of restriction of processing**  
+### e) Right of restriction of processing  
 Each data subject shall have the right granted by the European legislator to obtain from the controller restriction of processing where one of the following applies:
 
 - The accuracy of the personal data is contested by the data subject, for a period enabling the controller to verify the accuracy of the personal data.
@@ -132,14 +132,14 @@ Each data subject shall have the right granted by the European legislator to obt
 
 If one of the aforementioned conditions is met, and a data subject wishes to request the restriction of the processing of personal data stored, he or she may at any time contact the controller. The controller will arrange the restriction of the processing.
 
-**f) Right to data portability**  
+### f) Right to data portability  
 Each data subject shall have the right granted by the European legislator, to receive the personal data concerning him or her, which was provided to a controller, in a structured, commonly used and machine-readable format. He or she shall have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided, as long as the processing is based on consent pursuant to point (a) of Article 6(1) of the GDPR or point (a) of Article 9(2) of the GDPR, or on a contract pursuant to point (b) of Article 6(1) of the GDPR, and the processing is carried out by automated means, as long as the processing is not necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
 
 Furthermore, in exercising his or her right to data portability pursuant to Article 20(1) of the GDPR, the data subject shall have the right to have personal data transmitted directly from one controller to another, where technically feasible and when doing so does not adversely affect the rights and freedoms of others.
 
 In order to assert the right to data portability, the data subject may at any time contact the controller.
 
-**g) Right to object**  
+### g) Right to object  
 Each data subject shall have the right granted by the European legislator to object, on grounds relating to his or her particular situation, at any time, to processing of personal data concerning him or her, which is based on point (e) or (f) of Article 6(1) of the GDPR. This also applies to profiling based on these provisions.
 
 The controller shall no longer process the personal data in the event of the objection, unless we can demonstrate compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject, or for the establishment, exercise or defence of legal claims.
@@ -150,14 +150,14 @@ In addition, the data subject has the right, on grounds relating to his or her p
 
 In order to exercise the right to object, the data subject may contact the controller. In addition, the data subject is free in the context of the use of information society services, and notwithstanding Directive 2002/58/EC, to use his or her right to object by automated means using technical specifications.
 
-**h) Automated individual decision-making, including profiling**  
+### h) Automated individual decision-making, including profiling  
 Each data subject shall have the right granted by the European legislator not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her, or similarly significantly affects him or her, as long as the decision (1) is not is necessary for entering into, or the performance of, a contract between the data subject and a data controller, or (2) is not authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, or (3) is not based on the data subject's explicit consent.
 
 If the decision (1) is necessary for entering into, or the performance of, a contract between the data subject and a data controller, or (2) it is based on the data subject's explicit consent, the controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express his or her point of view and contest the decision.
 
 If the data subject wishes to exercise the rights concerning automated individual decision-making, he or she may, at any time, contact the controller.
 
-**i) Right to withdraw data protection consent**  
+### i) Right to withdraw data protection consent  
 Each data subject shall have the right granted by the European legislator to withdraw his or her consent to processing of his or her personal data at any time.
 
 If the data subject wishes to exercise the right to withdraw the consent, he or she may, at any time, contact the controller.
