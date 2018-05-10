@@ -29,22 +29,22 @@ Restriction of processing is the marking of stored personal data with the aim of
 **e) Profiling**  
 Profiling means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.
 
-**f) Pseudonymisation**
+**f) Pseudonymisation**  
 Pseudonymisation is the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.
 
-**g) Controller or controller responsible for the processing**
+**g) Controller or controller responsible for the processing**  
 Controller or controller responsible for the processing is the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law.
 
-**h) Processor**
+**h) Processor**  
 Processor is a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
 
-**i) Recipient**
+**i) Recipient**  
 Recipient is a natural or legal person, public authority, agency or another body, to which the personal data are disclosed, whether a third party or not. However, public authorities which may receive personal data in the framework of a particular inquiry in accordance with Union or Member State law shall not be regarded as recipients; the processing of those data by those public authorities shall be in compliance with the applicable data protection rules according to the purposes of the processing.
 
-**j) Third party**
+**j) Third party**  
 Third party is a natural or legal person, public authority, agency or body other than the data subject, controller, processor and persons who, under the direct authority of the controller or processor, are authorised to process personal data.
 
-**k) Consent**
+**k) Consent**  
 Consent of the data subject is any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
 
 ## 2. Name and Address of the controller
@@ -86,7 +86,7 @@ If the storage purpose is not applicable, or if a storage period prescribed by t
 
 ## 6. Rights of the data subject
 
-**a) Right of confirmation** 
+**a) Right of confirmation**  
 Each data subject shall have the right granted by the European legislator to obtain from the controller the confirmation as to whether or not personal data concerning him or her are being processed. If a data subject wishes to avail himself of this right of confirmation, he or she may, at any time, contact the controller.
 
 **b) Right of access**  
@@ -139,7 +139,7 @@ Furthermore, in exercising his or her right to data portability pursuant to Arti
 
 In order to assert the right to data portability, the data subject may at any time contact the controller.
 
-**g) Right to object**
+**g) Right to object**  
 Each data subject shall have the right granted by the European legislator to object, on grounds relating to his or her particular situation, at any time, to processing of personal data concerning him or her, which is based on point (e) or (f) of Article 6(1) of the GDPR. This also applies to profiling based on these provisions.
 
 The controller shall no longer process the personal data in the event of the objection, unless we can demonstrate compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject, or for the establishment, exercise or defence of legal claims.
@@ -157,7 +157,7 @@ If the decision (1) is necessary for entering into, or the performance of, a con
 
 If the data subject wishes to exercise the rights concerning automated individual decision-making, he or she may, at any time, contact the controller.
 
-**i) Right to withdraw data protection consent** 
+**i) Right to withdraw data protection consent**  
 Each data subject shall have the right granted by the European legislator to withdraw his or her consent to processing of his or her personal data at any time.
 
 If the data subject wishes to exercise the right to withdraw the consent, he or she may, at any time, contact the controller.
