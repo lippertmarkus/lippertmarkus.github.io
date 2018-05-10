@@ -6,21 +6,21 @@ title: "Impress"
 
 Information in accordance with section 5 TMG
 
-Markus Lippert\
-Am Hochrain 26c\
-89250 Senden\
+Markus Lippert  
+Am Hochrain 26c  
+89250 Senden  
 Germany
 
 # Contact
 
-**Telephone:** +49 1575 1345734\
-**E-Mail:** blog (at) lippertmarkus (dot) de\
+**Telephone:** +49 1575 1345734  
+**E-Mail:** blog (at) lippertmarkus (dot) de
 
 # Person responsible for content in accordance with 55 Abs. 2 RStV
 
-Markus Lippert\
-Am Hochrain 26c\
-89250 Senden\
+Markus Lippert  
+Am Hochrain 26c  
+89250 Senden  
 Germany
 
 # Disclaimer
