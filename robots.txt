@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /impress.html
+Disallow: /privacy-policy.html
+Sitemap: {{ site.url }}/sitemap.xml
