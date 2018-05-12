@@ -14,6 +14,8 @@ rss: RSS
 show_excerpts: true
 
 google_analytics: UA-NNNNNNNN-N
+disqus:
+    shortname: lippertmarkus
 
 plugins:
  - jekyll-feed
