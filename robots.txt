@@ -2,6 +2,6 @@
 ---
 
 User-agent: *
-Disallow: /impress/
-Disallow: /privacy-policy/
+Disallow: {% link impress.md %}
+Disallow: {% link privacy-policy.md %}
 Sitemap: {{ site.url }}/sitemap.xml
