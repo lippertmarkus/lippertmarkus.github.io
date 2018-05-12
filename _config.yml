@@ -21,5 +21,4 @@ plugins:
  - jekyll-sitemap
 
 header_pages:
-  - impress.md
-  - privacy-policy.md
+  - about.md
