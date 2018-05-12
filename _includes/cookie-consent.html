@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="{{ "/assets/cookieconsent.min.css" | relative_url }}" />
+<script src="{{ "/assets/cookieconsent.min.js" | relative_url }}"></script>
+<script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#000"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "content": {
+      "link": "Privacy Policy",
+      "href": "{% link privacy-policy.md %}"
+    }
+  })});
+</script>
