@@ -194,24 +194,33 @@ To use the DISQUS comment function, users can log in via their own DISQUS user a
 
 We only embed DISQUS with its functions into our website, whereby we can influence the comments of the users. However, the users enter into a direct contractual relationship with DISQUS, in the context of which DISQUS processes the comments of the users and is a contact for any deletion of the user's data. We refer to DISQUS's data protection declaration: [https://help.disqus.com/terms-and-policies/disqus-privacy-policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy) and also point out to users that they can assume that DISQUS stores not only the comment content but also its IP address and the time of the comment, and can store cookies on users' computers and use them to display advertising. Users may, however, object to the processing of their data for the purpose of displaying advertisements: [https://disqus.com/data-sharing-settings](https://disqus.com/data-sharing-settings). 
 
+## 9. Collection of access data and log files
 
-## 9. Legal basis for the processing
+We, or our hosting provider, collect the following data on the basis of our legitimate interests within the meaning of Art. 6 para. 1 lit. f. DSGVO data on each access to the server on which this service is located (so-called server log files). Access data can include among others the name of the accessed website, file, date and time of access, transferred data volume, notification of successful access, browser type and version, the user's operating system, referrer URL (the previously visited page), IP address and the requesting provider.
+
+## 10. Contact
+
+When contacting us (e.g. via contact form, e-mail, telephone or social media), the user's details are processed for processing the contact enquiry and its processing in accordance with Art. 6 para. 1 lit. b) DSGVO. 
+
+We delete the requests if they are no longer necessary. 
+
+## 11. Legal basis for the processing
 
 Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain consent for a specific processing purpose. If the processing of personal data is necessary for the performance of a contract to which the data subject is party, as is the case, for example, when processing operations are necessary for the supply of goods or to provide any other service, the processing is based on Article 6(1) lit. b GDPR. The same applies to such processing operations which are necessary for carrying out pre-contractual measures, for example in the case of inquiries concerning our products or services. Is the controller subject to a legal obligation by which processing of personal data is required, such as for the fulfillment of tax obligations, the processing is based on Art. 6(1) lit. c GDPR. In rare cases, the processing of personal data may be necessary to protect the vital interests of the data subject or of another natural person. Finally, processing operations could be based on Article 6(1) lit. f GDPR. This legal basis is used for processing operations which are not covered by any of the abovementioned legal grounds, if processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. Such processing operations are particularly permissible because they have been specifically mentioned by the European legislator. He considered that a legitimate interest could be assumed if the data subject is a client of the controller (Recital 47 Sentence 2 GDPR).
 
-## 10. The legitimate interests pursued by the controller or by a third party
+## 12. The legitimate interests pursued by the controller or by a third party
 
 Where the processing of personal data is based on Article 6(1) lit. f GDPR our legitimate interest is to carry out our business in favor of the well-being of all our visitors.
 
-## 11. Period for which the personal data will be stored
+## 13. Period for which the personal data will be stored
 
 The criteria used to determine the period of storage of personal data is the respective statutory retention period. After expiration of that period, the corresponding data is routinely deleted, as long as it is no longer necessary for the fulfillment of the contract or the initiation of a contract.
 
-## 12. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
+## 14. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
 
 We clarify that the provision of personal data is partly required by law (e.g. tax regulations) or can also result from contractual provisions (e.g. information on the contractual partner). Sometimes it may be necessary to conclude a contract that the data subject provides us with personal data, which must subsequently be processed by us. The data subject is, for example, obliged to provide us with personal data when the controller signs a contract with him or her. The non-provision of the personal data would have the consequence that the contract with the data subject could not be concluded. Before personal data is provided by the data subject, the data subject must contact the controller. The controller clarifies to the data subject whether the provision of the personal data is required by law or contract or is necessary for the conclusion of the contract, whether there is an obligation to provide the personal data and the consequences of non-provision of the personal data.
 
-## 13. Existence of automated decision-making
+## 15. Existence of automated decision-making
 
 As a responsible website, we do not use automatic decision-making or profiling.
 
