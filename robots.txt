@@ -2,6 +2,6 @@
 ---
 
 User-agent: *
-Disallow: /impress.html
-Disallow: /privacy-policy.html
+Disallow: /impress/
+Disallow: /privacy-policy/
 Sitemap: {{ site.url }}/sitemap.xml
