@@ -3,6 +3,7 @@ theme: minima
 title: Markus Lippert
 author: Markus Lippert
 description: Some projects, thoughts and other interesting stuff
+permalink: pretty
 
 twitter_username: lippert_markus
 github_username:  lippertmarkus
