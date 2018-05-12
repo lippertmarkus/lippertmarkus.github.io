@@ -12,6 +12,7 @@
 .social-media-list li {
     display: inline;
     padding-right: 6px;
+    padding-left: 6px;
 }
 
 .footer-col-3 {
@@ -22,13 +23,12 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 110px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -38,9 +38,9 @@
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
-    top: 100%;
+    bottom: 150%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -55px;
 
     /* Fade in tooltip */
     opacity: 0;
