@@ -58,7 +58,7 @@ Am Hochrain 26c
 Germany
 
 **Telephone:** +49 1575 1345734  
-**Email:** blog (at) lippertmarkus (dot) de  
+**Email:** web (at) lippertmarkus (dot) de  
 **Website:** lippertmarkus.de
 
 ## 3. Cookies
