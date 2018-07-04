@@ -9,7 +9,7 @@ It's been a long time since my last post and there was a lot of stuff going on. 
 
 # Preparation
 
-The idea started while watching a [video on YouTube](https://www.youtube.com/watch?v=K3QXLQ1UXqs) about another arcade cabinet build. I then did some research and found some [inspiration](http://www.coldbeamgames.com/blog/i-built-an-arcade-cabinet) and plans on [http://koenigs.dk/mame/eng/draw.htm](http://koenigs.dk/mame/eng/draw.htm) for building your own cabinet. So credits to them!
+The idea started while watching a [video on YouTube](https://www.youtube.com/watch?v=K3QXLQ1UXqs) about another arcade cabinet build. I then did some research and found some [inspiration](http://www.coldbeamgames.com/blog/i-built-an-arcade-cabinet) and plans on [koenigs.dk](http://koenigs.dk/mame/eng/draw.htm) for building your own cabinet. So credits to them!
 
 To verify the plans I created a quick 3D model in Fusion 360:
 
@@ -40,7 +40,7 @@ This is definitely not a cheap project but you'll have a lot of fun building and
 | Adhesive foil: Plexiglass display (front-adhesive) | $20 |
 | Adhesive foils for the wood parts     |              $50 |
 |=======================================+==================|
-| **Total**                             |         **$256** |
+| **Total**                             |         **$264** |
 |---------------------------------------+------------------|
 
 I'm sure you'll find some old laths, speakers and a display for free. I had them laying around, as well as some LEDs, the black paint and the Raspberry Pi - so I already saved a lot.
@@ -72,7 +72,7 @@ The foil for the marquee needs to be translucent to let the light of the LEDs sh
 
 As most of the vendors just offer specific sizes of foils you should put your graphics together to fully utilize the whole space. Also read the recommendations of the vendor for resolution and DPI of the graphics to get the maximum quality.
 
-To attach the foils to the wood you should start at one side an make sure the edges are parallel to each other. Then slowly stick it to the wood while removing the air bubbles which might appear. To get sharp edges you can use a scalpel. The foil for the marquee was the most difficult and even with help I attached it a bit askew. But the with the lighting it looks great anyway:
+To attach the foils to the wood you should start at one side an make sure the edges are parallel to each other. Then slowly stick it to the wood while removing the air bubbles which might appear. To get sharp edges you can use a scalpel. The foil for the marquee was the most difficult and even with help I attached it a bit askew. But with the lighting it looks great anyway:
 
 {: .center}
 ![Painted cabinet](/assets/posts/arcade-machine/3-3.jpg){:width="45%"}
