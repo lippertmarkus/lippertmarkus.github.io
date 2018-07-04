@@ -9,7 +9,7 @@ It's been a long time since my last post and there was a lot of stuff going on. 
 
 # Preparation
 
-The idea started while watching a [video on YouTube](https://www.youtube.com/watch?v=K3QXLQ1UXqs) about another arcade cabinet build. I then did some research and found some [inspiration](http://www.coldbeamgames.com/blog/i-built-an-arcade-cabinet) and plans on http://koenigs.dk/mame/eng/draw.htm for building your own cabinet. So credits to them!
+The idea started while watching a [video on YouTube](https://www.youtube.com/watch?v=K3QXLQ1UXqs) about another arcade cabinet build. I then did some research and found some [inspiration](http://www.coldbeamgames.com/blog/i-built-an-arcade-cabinet) and plans on [http://koenigs.dk/mame/eng/draw.htm](http://koenigs.dk/mame/eng/draw.htm) for building your own cabinet. So credits to them!
 
 To verify the plans I created a quick 3D model in Fusion 360:
 
