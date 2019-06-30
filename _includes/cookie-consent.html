@@ -10,6 +10,12 @@
     location.reload();
   }
 
+  function setDisqusCookie(status)
+  {
+    var d = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+    document.cookie = "disqus_status="+status+"; expires=" + d.toUTCString() + "; path=/";
+  }
+
   window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     "palette": {
@@ -31,6 +37,8 @@
       if (status === "allow") {
         window.cookiesAllowed = true;
         window.gaLoad();
+      } else {
+        setDisqusCookie('deny');
       }
     }
   })});
