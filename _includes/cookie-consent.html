@@ -1,6 +1,14 @@
 <link rel="stylesheet" type="text/css" href="{{ "/assets/cookieconsent.min.css" | relative_url }}" />
 <script src="{{ "/assets/cookieconsent.min.js" | relative_url }}"></script>
 <script>
+  window.cookiesAllowed = (document.cookie.indexOf('cookieconsent_status=allow') > -1);
+
+  function cookieChooseAgain()
+  {
+    document.cookie = "cookieconsent_status=0; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
+    location.reload();
+  }
+
   window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     "palette": {
@@ -16,6 +24,13 @@
       "href": "{% link privacy-policy.md %}"
     },
     "position": "top",
-    "static": true
+    "static": true,
+    "type": "opt-in",
+    "onStatusChange": function(status, chosenBefore) {
+      if (status === "allow") {
+        window.cookiesAllowed = true;
+        window.gaLoad();
+      }
+    }
   })});
 </script>

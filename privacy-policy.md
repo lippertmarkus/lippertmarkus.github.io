@@ -63,6 +63,8 @@ Germany
 
 ## 3. Cookies
 
+{% include cookie-status.html %}
+
 The Internet pages use cookies. Cookies are text files that are stored in a computer system via an Internet browser.
 
 Many Internet sites and servers use cookies. Many cookies contain a so-called cookie ID. A cookie ID is a unique identifier of the cookie. It consists of a character string through which Internet pages and servers can be assigned to the specific Internet browser in which the cookie was stored. This allows visited Internet sites and servers to differentiate the individual browser of the data subject from other Internet browsers that contain other cookies. A specific Internet browser can be recognized and identified using the unique cookie ID.
