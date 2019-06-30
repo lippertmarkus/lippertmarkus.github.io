@@ -2,6 +2,7 @@
 <script src="{{ "/assets/cookieconsent.min.js" | relative_url }}"></script>
 <script>
   window.cookiesAllowed = (document.cookie.indexOf('cookieconsent_status=allow') > -1);
+  window.disqusAllowed = (document.cookie.indexOf('disqus_status=allow') > -1)
 
   function cookieChooseAgain()
   {

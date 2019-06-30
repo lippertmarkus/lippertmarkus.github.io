@@ -1,5 +1,8 @@
 {%- if page.comments != false and jekyll.environment == "production" -%}
-
+  <hr><br>
+  <h1>Comments</h1>
+  <a name="comments"></a>
+  <div id="disqus-links"></div> <br>
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
@@ -7,14 +10,44 @@
       this.page.identifier = '{{ page.url | absolute_url }}';
     };
 
-    (function() {
+    function setDisqusStatus(status) {
+      document.cookie = "disqus_status="+status+"; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/"; // TODO only one year
+
+      if (status === "disallow")
+        location.reload();
+      else if (status === "allow") {
+        window.disqusAllowed = true;
+        writeSetDisqusStatusLinks();
+        loadDisqus();
+      }
+    }
+
+    function loadDisqus() {
+      if (window.disqusLoaded)
+        return;
+
       var d = document, s = d.createElement('script');
 
       s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
 
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
-    })();
-  </script>
+      window.disqusLoaded = true;
+    };
+
+    function writeSetDisqusStatusLinks() {
+      var el = document.getElementById('disqus-links');
+      var appendText = ' DISQUS comment function (see <a href="{% link privacy-policy.md %}">Privacy Policy</a>)';
+      
+      if(window.disqusAllowed) {
+        el.innerHTML = '<a id="disqus-status" href="#comments" onclick="setDisqusStatus(\'disallow\')">Disable</a>' + appendText;
+        loadDisqus();
+      } else {
+        el.innerHTML = '<a id="disqus-status" href="#comments" onclick="setDisqusStatus(\'allow\')">Enable</a>' + appendText;
+      }
+    }
+
+    writeSetDisqusStatusLinks();
+  </script> 
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{%- endif -%}
+  {%- endif -%}
