@@ -9,3 +9,6 @@ title: About Me
 ## Work Experience
 - **2015-2018**: Software developer (Dual study program, see above) at [Axians Infoma](https://www.axians-infoma.de/)
 - **2018-Today**: Software developer tooling at [Axians Infoma](https://www.axians-infoma.de/)
+
+## Certifications
+{% include certs.html %}
