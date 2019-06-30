@@ -12,7 +12,7 @@ linkedin_username: lippertmarkus
 rss: RSS
 
 show_excerpts: true
-excerpt_separator: "\r\n"
+excerpt_separator: "\n"
 
 google_analytics: UA-69344726-4
 disqus:
