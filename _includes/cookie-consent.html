@@ -1,46 +1,42 @@
-<link rel="stylesheet" type="text/css" href="{{ "/assets/cookieconsent.min.css" | relative_url }}" />
-<script src="{{ "/assets/cookieconsent.min.js" | relative_url }}"></script>
 <script>
-  window.cookiesAllowed = (document.cookie.indexOf('cookieconsent_status=allow') > -1);
-  window.disqusAllowed = (document.cookie.indexOf('disqus_status=allow') > -1)
+window.cookieBanner = !(document.cookie.indexOf('cookieconsent_status=') > -1);
+window.cookiesAllowed = (document.cookie.indexOf('cookieconsent_status=allow') > -1);
+window.disqusAllowed = (document.cookie.indexOf('disqus_status=allow') > -1)
 
-  function cookieChooseAgain()
-  {
+function cookieChooseAgain() {
     document.cookie = "cookieconsent_status=0; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
     location.reload();
-  }
+}
 
-  function setDisqusCookie(status)
-  {
+function setDisqusCookie(status) {
     var d = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
-    document.cookie = "disqus_status="+status+"; expires=" + d.toUTCString() + "; path=/";
-  }
+    document.cookie = "disqus_status=" + status + "; expires=" + d.toUTCString() + "; path=/";
+}
 
-  window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#000"
-      },
-      "button": {
-        "background": "#f1d600"
-      }
-    },
-    "content": {
-      "message": "This website uses cookies to ensure you get the best experience on our website. For more information and to change your decision later, see",
-      "link": "Privacy Policy",
-      "href": "{% link privacy-policy.md %}"
-    },
-    "position": "top",
-    "static": true,
-    "type": "opt-in",
-    "onStatusChange": function(status, chosenBefore) {
-      if (status === "allow") {
+function setCookieConsentCookie(status) {
+    var d = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+    document.cookie = "cookieconsent_status=" + status + "; expires=" + d.toUTCString() + "; path=/";
+}
+
+function hideCookieBanner() {
+    $('.cookie-consent').slideUp(500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.cookieBanner) 
+        $('.cookie-consent').css('display', 'flex');
+
+    $('.cookie-consent .btn-primary').click(function() {
         window.cookiesAllowed = true;
         window.gaLoad();
-      } else {
+        setCookieConsentCookie("allow");
+        hideCookieBanner();
+    });
+
+    $('.cookie-consent .btn-link').click(function() {
+        setCookieConsentCookie("deny");
         setDisqusCookie('deny');
-      }
-    }
-  })});
+        hideCookieBanner();
+    });
+});
 </script>

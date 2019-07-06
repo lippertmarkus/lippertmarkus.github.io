@@ -1,5 +1,8 @@
 ---
 title: "Own Smart Home: Firmware"
+image: /img/thumbnails/smart-home-fw.jpg
+bigimg: /img/smart-home-fw-cfg-code.jpg
+tags: [Programming,MQTT,Electronics,ESP8266,IoT]
 ---
 
 This is the third blog post about my smart home project. We'll have a closer look at the firmware. Consider reading the previous posts about this project:

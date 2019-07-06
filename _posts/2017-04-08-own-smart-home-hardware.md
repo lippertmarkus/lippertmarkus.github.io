@@ -1,5 +1,8 @@
 ---
 title: "Own Smart Home: Hardware"
+image: "/img/thumbnails/smart-home-hw.jpg"
+bigimg: "/img/smart-home-hw-pcb.jpg"
+tags: [Electronics,SmartHome,IoT,ESP8266]
 ---
 
 As a software developer, I'm also very interested in electronics and the programming of microcontrollers. Of course I also had a look into the current hype of home automation.

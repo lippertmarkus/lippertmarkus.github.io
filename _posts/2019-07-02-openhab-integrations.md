@@ -1,5 +1,8 @@
 ---
 title: "Integrating openHAB with Alexa, Google Home, Apple HomeKit and Cortana"
+image: /img/thumbnails/alexa.jpg
+bigimg: /img/google-home.jpg
+tags: [openHAB, Alexa, Google Home, Apple HomeKit, Cortana, Google Assistant]
 ---
 
 I already quickly introduced [openHAB](https://www.openhab.org/) in [a previous post]({% post_url 2017-04-16-own-smart-home-architecture %}) and over the past years it evolved a lot. Next to the support for a lot of smart devices it also enables the integration with various assistants, making your Smart Home even more convenient and fun.

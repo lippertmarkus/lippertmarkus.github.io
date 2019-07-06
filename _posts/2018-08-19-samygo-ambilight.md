@@ -1,5 +1,8 @@
 ---
 title: "TV Ambilight with SamyGO"
+image: /img/thumbnails/ambilight.jpg
+bigimg: /img/raspi-zero-w.jpg
+tags: [openHAB, Alexa, SamyGO, Raspberry Pi,Electronics]
 ---
 
 There are a whole lot of instructions on how to set up a DIY ambilight for your TV. However, most of the instructions grab the video signal via an HDMI splitter in combination with an HDMI to RCA/AV converter. This means that you can only use the ambilight with external HDMI/RCA devices or set-top boxes.

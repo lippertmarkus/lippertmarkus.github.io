@@ -1,5 +1,8 @@
 ---
 title: "Arcade Machine"
+image: "/img/thumbnails/arcade-machine.jpg"
+bigimg: "/img/arcade-machine-marquee.jpg"
+tags: [Electronics,Woodworking,Raspberry Pi,Design]
 ---
 
 It's been a long time since my last post and there was a lot of stuff going on. I currently write my bachelor thesis and surprisingly have got some spare time. This time I want to write about a project I already did a year ago: I built my own arcade machine! As a motivation, here is the result:
