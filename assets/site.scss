@@ -2,7 +2,11 @@
 layout: null
 ---
 
-@import url("pygment_highlights.css");
+
+@import "bootstrap.min";
+@import "bootstrap-social";
+@import "fontawesome.min";
+@import "pygment_highlights";
 
 /* To center images */
 .center {
@@ -834,3 +838,4 @@ td.gutter {
   font-style: italic;
   font-size: 16px;
 }
+
