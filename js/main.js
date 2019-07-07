@@ -2,7 +2,7 @@
 layout: null
 ---
 
-{% include_relative jquery-1.11.2.min.js %}
+{% include_relative jquery.min.js %}
 {% include_relative bootstrap.min.js %}
 {% include_relative lazyload.min.js %}
 
