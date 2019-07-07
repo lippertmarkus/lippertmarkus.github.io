@@ -62,6 +62,7 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Markus Lippert
+  twitter: lippert_markus
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -192,7 +193,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE-beautiful-jekyll
-  - README.md
+  - README-beautiful-jekyll.md
   - Vagrantfile
   - LICENSE-fontawesome.txt
 

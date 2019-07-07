@@ -27,7 +27,7 @@ use-site-title: true
       {% if post.image %}
       <div class="post-image">
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
+          <img src="{{ post.image | relative_url }}" alt="Post Thumbnail">
         </a>
       </div>
       {% endif %}
