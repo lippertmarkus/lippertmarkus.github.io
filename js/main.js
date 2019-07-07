@@ -6,11 +6,6 @@ layout: null
 {% include_relative bootstrap.min.js %}
 {% include_relative lazyload.min.js %}
 
-var lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lazy"
-  // ... more custom settings?
-});
-
 // Dean Attali / Beautiful Jekyll 2016
 
 var main = {
@@ -79,6 +74,10 @@ var main = {
 
     // show the big header image
     main.initImgs();
+
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy"
+    });
   },
 
   initImgs : function() {
