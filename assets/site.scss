@@ -659,9 +659,14 @@ footer .theme-by {
     width: 100%;
     height: 220px;
   }
-  .intro-header.big-img .page-heading,
-  .intro-header.big-img .post-heading {
-    display: none;
+  .intro-header .page-heading h1 {
+    font-size: 30px;
+  }
+  .intro-header .post-heading h1 {
+    font-size: 20px;
+  }
+  .intro-header .page-heading .page-subheading {
+    font-size: 15px;
   }
   .header-section.has-img .big-img {
     margin-bottom: 0;
