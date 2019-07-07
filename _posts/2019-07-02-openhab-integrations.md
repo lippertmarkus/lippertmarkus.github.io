@@ -21,8 +21,9 @@ After registering in the openHAB Cloud instance and locally installing the Cloud
 
 After setting up openHAB Cloud you can easily connect your openHAB installation via the [openHAB Skill](https://www.amazon.de//dp/B01MTY7Z5L). Just activate the skill via the website or the Alexa app, log in with your openHAB Cloud account and click _Allow_. If your items are configured correctly like explained in the [documentation](https://www.openhab.org/docs/ecosystem/alexa/) you can control your devices with your voice via the Alexa App or the Amazon Echo.
 
-{: .center}
-![Alexa Setup](/assets/posts/openhab-integrations/alexa-setup.gif){:height="500px"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Alexa Setup" data-src="/assets/posts/openhab-integrations/alexa-setup.gif" height="500px" />
+</div>
 
 If you don't want to use openHAB Cloud you can also set up the [Hue Emulation Service](https://www.openhab.org/addons/integrations/hueemulation/). It emulates a HUE bridge which can be used by Amazon Echo or Google Home devices in your local network. It can also be installed and configured via the Paper UI. Amazon Echo expects the bridge to run on port 80 which means you need to use this as the port for your openHAB installation, create a port forward or install a reverse proxy. Also consider, that some Echo devices only support the discovery of first-generation HUE bridges which can be achieved with the `temporarilyEmulateV1bridge` setting. Detailed information about the configuration of the HUE Emulation Service as well as the items can be found [here](https://www.openhab.org/addons/integrations/hueemulation/).
 
@@ -30,8 +31,10 @@ If you don't want to use openHAB Cloud you can also set up the [Hue Emulation Se
 
 The Google Home and Google Assistant integration also works like the Alexa integration. In the Google Home app you add a new item and click on _Existing item_ to add the openHAB service and log into your openHAB Cloud account. You can then control your smart devices with your voice with the Google Assistant on your Smartphone or via the Google Home device.
 
-{: .center}
-![Google Assistant Setup](/assets/posts/openhab-integrations/google-home-setup.gif){:height="500px"} ![Google Assistant Example](/assets/posts/openhab-integrations/google-home-cmd.gif){:height="500px"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Google Assistant Setup" data-src="/assets/posts/openhab-integrations/google-home-setup.gif" height="500px" />
+<img class="lazy" alt="Google Assistant Example" data-src="/assets/posts/openhab-integrations/google-home-cmd.gif" height="500px" />
+</div>
 
 Information about the configuration of the your openHAB items as well as a step-by-step is again available in the [documentation](https://www.openhab.org/docs/ecosystem/google-assistant/). Make sure to get your item configuration right as the openHAB service else won't connect via openHAB cloud.
 
@@ -41,8 +44,10 @@ Again for offline integration you have the option to use the Hue Emulation Servi
 
 The Apple HomeKit integration only works locally for now. After installing the HomeKit integration via the Paper UI you need need to configure a PIN and the network interface to use. Within the Apple Home app you can manually search for the bridge via _Add > Add Device > Code is missing_ and add the devices after entering the PIN. Those smart devices can be controlled within the Home app or with Siri.
 
-{: .center}
-![HomeKit Setup](/assets/posts/openhab-integrations/homekit-setup.gif){:height="500px"} ![Google Assistant Example](/assets/posts/openhab-integrations/siri-cmd.gif){:height="500px"}
+<div class="center" markdown="1">
+<img class="lazy" alt="HomeKit Setup" data-src="/assets/posts/openhab-integrations/homekit-setup.gif" height="500px" />
+<img class="lazy" alt="Siri Example" data-src="/assets/posts/openhab-integrations/siri-cmd.gif" height="500px" />
+</div>
 
 Again, make sure to [configure](https://www.openhab.org/addons/integrations/homekit/) your openHAB items accordingly to allow the discovery and control of your appliances.
 

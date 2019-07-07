@@ -1,3 +1,16 @@
+---
+layout: null
+---
+
+{% include_relative jquery-1.11.2.min.js %}
+{% include_relative bootstrap.min.js %}
+{% include_relative lazyload.min.js %}
+
+var lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy"
+  // ... more custom settings?
+});
+
 // Dean Attali / Beautiful Jekyll 2016
 
 var main = {
@@ -92,7 +105,7 @@ var main = {
 		// if I want to do something once the image is ready: `prefetchImg.onload = function(){}`
 
   		setTimeout(function(){
-                  var img = $("<div></div>").addClass("big-img-transition").css("background-image", 'url(' + src + ')');
+                  var img = $("<div></div>").addClass("big-img-transition lazy").attr("data-bg", 'url(' + src + ')');
   		  $(".intro-header.big-img").prepend(img);
   		  setTimeout(function(){ img.css("opacity", "1"); }, 50);
 
@@ -126,7 +139,7 @@ var main = {
   },
 
   setImg : function(src, desc) {
-	$(".intro-header.big-img").css("background-image", 'url(' + src + ')');
+	$(".intro-header.big-img").attr("data-bg", 'url(' + src + ')');
 	if (typeof desc !== typeof undefined && desc !== false) {
 	  $(".img-desc").text(desc).show();
 	} else {

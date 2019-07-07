@@ -8,6 +8,11 @@ layout: null
 @import "fontawesome.min";
 @import "pygment_highlights";
 
+/* Prevents img without src to appear */
+img:not([src]) {
+  visibility: hidden;
+}
+
 /* To center images */
 .center {
   text-align: center;
