@@ -11,8 +11,9 @@ After we had a look at the hardware, let's have a look at the overall architectu
 
 After some general testing and looking around technologies, I decided on the protocols and libraries I want to use. Over time, the following architecture developed:
 
-{: .center}
-![Architecture](/assets/posts/own-smart-home-architecture/architecture.png){:width="40%" align="center"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Architecture" data-src="/assets/posts/own-smart-home-architecture/architecture.png" width="40%" />
+</div>
 
 To be precise, I only decided on the use of [MQTT](http://mqtt.org/) as the communcation protocol in the first stage. The utilization of [OpenHAB 2](http://www.openhab.org/) came up later on.
 
@@ -32,8 +33,9 @@ Since version 2, OpenHAB also provides the 'Paper UI' as a user-friendly solutio
 
 I connected OpenHAB with a MySQL database (running on my Raspberry anyway for a little web-app) to persist some data (for example the temperatures over time). Next to mosquitto/my ESPs it also interfaces with my Amazon Echo Dot as well as some Samsung TVs, Wake-On-LAN devices and other stuff.
 
-{: .center}
-![OpenHab 2 Mobile App](/assets/posts/own-smart-home-architecture/screenshot.png){:width="40%" align="center"}
+<div class="center" markdown="1">
+<img class="lazy" alt="OpenHab 2 Mobile App" data-src="/assets/posts/own-smart-home-architecture/screenshot.png" width="40%" />
+</div>
 
 I'll go into more detail on my use of OpenHAB and the connection with the free OpenHAB Cloud for external access in a future post.
 

@@ -37,8 +37,9 @@ If your power supply has no USB connector, you can just connect it to pin 2 (VCC
 
 The communication between the Pi and the LED strip works via SPI. For this to function properly you need to connect the clock and data pins of the LED strip with pin 23 (SCLK) and pin 19 (MOSI) of the Pi. 
 
-{: .center}
-![Schematic](/assets/posts/samygo-ambilight/schematic.png){:width="50%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Schematic" data-src="/assets/posts/samygo-ambilight/schematic.png" height="500px" />
+</div>
 
 ## Software Setup
 
@@ -56,8 +57,10 @@ We use Hyperion for processing the video signal and controlling the LEDs accordi
 
 Hyperion is very powerful and also has a JSON API for controlling it. You can e.g. set effects for giving your room a cool look, even when the TV is switched off:
 
-{: .center}
-![Rainbow effect](/assets/posts/samygo-ambilight/effect-rainbow.webp){:width="45%"} ![Police lights effect](/assets/posts/samygo-ambilight/effect-police.webp){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Rainbow effect" data-src="/assets/posts/samygo-ambilight/effect-rainbow.webp" width="45%" />
+<img class="lazy" alt="Police lights effect" data-src="/assets/posts/samygo-ambilight/effect-police.webp" width="45%" />
+</div>
 
 The API can also be used by OpenHAB via the Hyperion Binding. This way you can integrate your ambilight into your smart home solution.
 
@@ -79,8 +82,9 @@ Color hyperion_OG_markus_color         "TV Farbe"     ["Lighting"]  { channel="h
 
 Next to the rather fast effects in the animations above, there are also more slow effects like `Blue mood blobs`. Those effects as well as the color and brightness of the ambilight can be set easily via the OpenHAB UI:
 
-{: .center}
-![Screenshot OpenHAB](/assets/posts/samygo-ambilight/screen-openhab.png){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Screenshot OpenHAB" data-src="/assets/posts/samygo-ambilight/screen-openhab.png" height="500px" />
+</div>
 
 ### Alexa Integration
 
@@ -88,8 +92,9 @@ OpenHAB works together with Alexa through the [Alexa OpenHAB skill](https://www.
 
 After the setup of the skill, you can add `["Lighting"]` to the dimmer and color item of the ambilight. This enables the discovery of the items for the skill and therefore the Alexa app. After searching and adding these new items in the Alexa app, they're controllable via Amazon Echo devices.
 
-{: .center}
-![Screenshot Alexa LEDs](/assets/posts/samygo-ambilight/screen-alexa.png){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Screenshot Alexa LEDs" data-src="/assets/posts/samygo-ambilight/screen-alexa.png" height="500px" />
+</div>
 
 ## Result
 

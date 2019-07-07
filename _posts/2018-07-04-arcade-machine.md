@@ -7,8 +7,9 @@ tags: [Electronics,Woodworking,Raspberry Pi,Design]
 
 It's been a long time since my last post and there was a lot of stuff going on. I currently write my bachelor thesis and surprisingly have got some spare time. This time I want to write about a project I already did a year ago: I built my own arcade machine! As a motivation, here is the result:
 
-{: .center}
-![Finished Arcade](/assets/posts/arcade-machine/3-1.jpg){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Finished Arcade" data-src="/assets/posts/arcade-machine/3-1.jpg" width="45%" />
+</div>
 
 # Preparation
 
@@ -16,8 +17,9 @@ The idea started while watching a [video on YouTube](https://www.youtube.com/wat
 
 To verify the plans I created a quick 3D model in Fusion 360:
 
-{: .center}
-![3D Model](/assets/posts/arcade-machine/render-wood.jpg){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="3D Model" data-src="/assets/posts/arcade-machine/render-wood.jpg" width="45%" />
+</div>
 
 I made some small individual changes to the plans and printed them before I started building.
 
@@ -52,8 +54,9 @@ I'm sure you'll find some old laths, speakers and a display for free. I had them
 
 The shop where I bought the wood already made most of the straight cuts for me. So I started cutting out the sides with a jigsaw and used another wood part as a spacer to screw on the laths to the sides. I basically just followed the plans and slightly improvised when running into problems.
 
-{: .center}
-![Rough shape](/assets/posts/arcade-machine/1.jpg){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Rough shape" data-src="/assets/posts/arcade-machine/1.jpg" width="45%" />
+</div>
 
 At the top I later decided to use smaller laths instead so that they won't affect the LED light for the marquee later on. I also mounted a lath right in the center behind the marquee to install my LEDs.
 
@@ -61,15 +64,18 @@ I mounted the kick plate with four strong magnets to have access to the Raspberr
 
 As all of that was finished, I sanded down the whole cabinet before painting it black. Then comes the fun part, designing the arcade cabinet.
 
-{: .center}
-![Painted cabinet](/assets/posts/arcade-machine/2.jpg){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Painted cabinet" data-src="/assets/posts/arcade-machine/2.jpg" width="45%" />
+</div>
 
 # Design
 
 The design is what makes the arcade unique so you should spent quite a lot of time with that. I kept it pretty simple and used some video game characters as well as some logos and put them together in a graphics program with the real measurements of the cabinet as a template. I made the graphics a bit bigger than the real parts to prevent having gaps in the end. I then again used Fusion 360 to get the overall picture of the design and was pretty happy with that:
 
-{: .center}
-![Design left](/assets/posts/arcade-machine/render-left.png){:width="45%"} ![Design right](/assets/posts/arcade-machine/render-right.png){:width="45%"} 
+<div class="center" markdown="1">
+<img class="lazy" alt="Design left" data-src="/assets/posts/arcade-machine/render-left.png" width="45%" />
+<img class="lazy" alt="Design right" data-src="/assets/posts/arcade-machine/render-right.png" width="45%" />
+</div>
 
 The foil for the marquee needs to be translucent to let the light of the LEDs shine through from behind. I ordered a foil with adhesive on top of the graphic for the plexiglas in front of the display. 
 
@@ -77,8 +83,9 @@ As most of the vendors just offer specific sizes of foils you should put your gr
 
 To attach the foils to the wood you should start at one side an make sure the edges are parallel to each other. Then slowly stick it to the wood while removing the air bubbles which might appear. To get sharp edges you can use a scalpel. The foil for the marquee was the most difficult and even with help I attached it a bit askew. But with the lighting it looks great anyway:
 
-{: .center}
-![Painted cabinet](/assets/posts/arcade-machine/3-3.jpg){:width="45%"}
+<div class="center" markdown="1">
+<img class="lazy" alt="Top front of cabinet" data-src="/assets/posts/arcade-machine/3-3.jpg" width="45%" />
+</div>
 
 # Hardware
 
@@ -96,5 +103,7 @@ As you might have guessed from the logo on the kick plate: I used [RetroPie](htt
 
 Although a bit expensive, it's a very cool project. I had a lot of fun building it and it's actually used pretty often. I also added an old keyboard and mouse so you could browse the web if you want to.
 
-{: .center}
-![Result right](/assets/posts/arcade-machine/3-2.jpg){:width="45%"} ![Drawer](/assets/posts/arcade-machine/3-4.jpg){:width="45%"} 
+<div class="center" markdown="1">
+<img class="lazy" alt="Result right" data-src="/assets/posts/arcade-machine/3-2.jpg" width="45%" />
+<img class="lazy" alt="Drawer" data-src="/assets/posts/arcade-machine/3-4.jpg" width="45%" />
+</div>

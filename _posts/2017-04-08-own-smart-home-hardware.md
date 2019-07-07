@@ -45,16 +45,22 @@ You may already have laying around some of the parts or can salvage them from ol
 
 After some breadboard prototyping I layed out a schematic in [EasyEDA](https://easyeda.com/) and created my first PCB ever (don't blame me for using autorouter). You can find the layout and the PCB [here](https://easyeda.com/markus9656/ESP_Managed-83b3b148fb944862be8a27f48f32800a). If you wonder why I'm running my ESP with 5V instead of the recommended 3.3V: My ESPs were much more stable while running them with 5V and there are definitely much more things that can be improved in my schematic.
 
-{: .center}
-![Schematic](/assets/posts/own-smart-home-hardware/Schematic.png){:width="45%"} ![PCB](/assets/posts/own-smart-home-hardware/PCB.png){:width="45%"} 
+<div class="center" markdown="1">
+<img class="lazy" alt="Schematic" data-src="/assets/posts/own-smart-home-hardware/Schematic.png" width="45%" />
+<img class="lazy" alt="PCB" data-src="/assets/posts/own-smart-home-hardware/PCB.png" width="45%" />
+</div>
 
 Although the holes are too close to the edges of the PCB and the resistor underneath the pushbutton is a bit too close to the microUSB port, the PCB came out pretty well for my first try. I ordered 5 pieces of the PCB at [Elecrow](https://www.elecrow.com/pcb-manufacturing.html) for less than $10. After soldering, I also created a little box for my project and printed it out with a 3D-printer of a friend.
 
-{: .center}
-![PCB front](/assets/posts/own-smart-home-hardware/pcb-front.jpg){:width="45%"} ![PCB back](/assets/posts/own-smart-home-hardware/pcb-back.jpg){:width="45%"} 
+<div class="center" markdown="1">
+<img class="lazy" alt="PCB front" data-src="/assets/posts/own-smart-home-hardware/pcb-front.jpg" width="45%" />
+<img class="lazy" alt="PCB back" data-src="/assets/posts/own-smart-home-hardware/pcb-back.jpg" width="45%" />
+</div>
 
-{: .center}
-![Box front](/assets/posts/own-smart-home-hardware/box-front.jpg){:width="45%"} ![Box back](/assets/posts/own-smart-home-hardware/box-back.jpg){:width="45%"} 
+<div class="center" markdown="1">
+<img class="lazy" alt="Box front" data-src="/assets/posts/own-smart-home-hardware/box-front.jpg" width="45%" />
+<img class="lazy" alt="Box back" data-src="/assets/posts/own-smart-home-hardware/box-back.jpg" width="45%" />
+</div>
 
 As running costs are also very interesting: The hardware used about 0,41W in my measurements. This results in around 1 € per year with average costs of 0.28 €/kWh for electricity in Germany.
 
