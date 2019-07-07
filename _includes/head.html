@@ -91,13 +91,13 @@
   {% endif %}
 
   {% if page.share-img %}
-  <meta property="og:image" content="{{ page.share-img }}" />
+  <meta property="og:image" content="{{ page.share-img | absolute_url  }}" />
   {% elsif site.avatar %}
   <meta property="og:image" content="{{ site.avatar | absolute_url }}" />
   {% elsif page.bigimg %}
-  <meta name="og:image" content="{{ page.bigimg }}" />
+  <meta name="og:image" content="{{ page.bigimg | absolute_url  }}" />
   {% elsif page.image %}
-  <meta name="og:image" content="{{ page.image }}" />
+  <meta name="og:image" content="{{ page.image | absolute_url  }}" />
   {% endif %}
 
 
@@ -123,13 +123,13 @@
   {% endif %}
 
   {% if page.share-img %}
-  <meta name="twitter:image" content="{{ page.share-img }}" />
+  <meta name="twitter:image" content="{{ page.share-img | absolute_url  }}" />
   {% elsif site.avatar %}
   <meta name="twitter:image" content="{{ site.avatar | absolute_url }}" />
   {% elsif page.bigimg %}
-  <meta name="twitter:image" content="{{ page.bigimg }}" />
+  <meta name="twitter:image" content="{{ page.bigimg | absolute_url  }}" />
   {% elsif page.image %}
-  <meta name="twitter:image" content="{{ page.image }}" />
+  <meta name="twitter:image" content="{{ page.image | absolute_url  }}" />
   {% endif %}
 
   {% if site.matomo %}
