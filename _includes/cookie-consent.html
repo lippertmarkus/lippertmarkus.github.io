@@ -35,12 +35,13 @@ function hideCookieBanner() {
 document.addEventListener('DOMContentLoaded', function() {
     if (window.cookieBanner) {
         $('.cookie-consent').css('display', 'flex');
-        setPaddingForCookieBanner();
-    }
 
-    $(window).resize(function(){
+        $(window).resize(function(){
+            setPaddingForCookieBanner();
+        });
+
         setPaddingForCookieBanner();
-    });
+    }   
 
     $('.cookie-consent .btn-primary').click(function() {
         window.cookiesAllowed = true;
