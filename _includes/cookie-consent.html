@@ -16,6 +16,7 @@ function setDisqusCookie(status) {
 function setCookieConsentCookie(status) {
     var d = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     document.cookie = "cookieconsent_status=" + status + "; expires=" + d.toUTCString() + "; path=/";
+    window.cookieBanner = false;
 }
 
 
@@ -37,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.cookie-consent').css('display', 'flex');
 
         $(window).resize(function(){
-            setPaddingForCookieBanner();
+            if (window.cookieBanner)
+                setPaddingForCookieBanner();
         });
 
         setPaddingForCookieBanner();
