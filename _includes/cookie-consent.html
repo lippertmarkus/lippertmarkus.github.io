@@ -18,13 +18,29 @@ function setCookieConsentCookie(status) {
     document.cookie = "cookieconsent_status=" + status + "; expires=" + d.toUTCString() + "; path=/";
 }
 
+
+function setPaddingForCookieBanner(customHeight)
+{
+    var height = customHeight != undefined ? customHeight : $('.cookie-consent').height();
+    $('header').css('padding-top', height+'px');
+}
+
 function hideCookieBanner() {
     $('.cookie-consent').slideUp(500);
+    $('header').animate({
+        'padding-top': 0
+    }, 500);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.cookieBanner) 
+    if (window.cookieBanner) {
         $('.cookie-consent').css('display', 'flex');
+        setPaddingForCookieBanner();
+    }
+
+    $(window).resize(function(){
+        setPaddingForCookieBanner();
+    });
 
     $('.cookie-consent .btn-primary').click(function() {
         window.cookiesAllowed = true;
