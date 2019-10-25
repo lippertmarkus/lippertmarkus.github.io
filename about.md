@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About me
+title: About
+bigimg: /img/about-big.jpg
 ---
 
 ## Education
