@@ -15,7 +15,7 @@ Germany
 ## Contact
 
 **Telephone:** +49 1575 1345734  
-**E-Mail:** web (at) lippertmarkus (dot) de
+**E-Mail:** web (at) lippertmarkus (dot) com
 
 ## Person responsible for content in accordance with 55 Abs. 2 RStV
 
