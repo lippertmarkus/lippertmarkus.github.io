@@ -1,9 +1,8 @@
 FROM jekyll/jekyll
 
-WORKDIR /website
-COPY Gemfile .
-COPY Gemfile.lock .
+COPY --chown=jekyll:jekyll Gemfile .
+COPY --chown=jekyll:jekyll Gemfile.lock .
 
-RUN bundle install
+RUN bundle install --quiet --clean
 
 CMD ["jekyll", "serve"]
