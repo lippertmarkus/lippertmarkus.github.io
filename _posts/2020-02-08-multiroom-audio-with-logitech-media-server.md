@@ -19,7 +19,7 @@ Go straight to the [software installation](#software).
 
 ## Introduction
 
-LMS (formerly Squeezebox Server) was originally developed by Slim Devices and later acquired by Logitech which provided the solution as open source software. There were also hardware players (Squeezeboxes) which were used together with the Squeezebox Server. These hardware players are no longer sold, but their software is also open source so that the community could further maintain the server and player software. Thank's to that you're now able to easily set up your own server and build your own Squeezebox or just add a simple headless player to your multiroom audio solution.
+LMS (formerly Squeezebox Server) was originally developed by Slim Devices and later acquired by Logitech which provided the solution as open source software. There were also hardware players (Squeezeboxes) which were used together with the Squeezebox Server. These hardware players are no longer sold, but their software is also open source so that the community could further maintain the server and player software. Thanks to that you're now able to easily set up your own server and build your own Squeezebox or just add a simple headless player to your multiroom audio solution.
 
 Most of the information can be found in the [wiki](http://wiki.slimdevices.com) or the [forums](https://forums.slimdevices.com/). If you need more information, please have a look there. I'll just quickly introduce the most important concepts to get started quickly with setting up a simple headless player. 
 
@@ -37,13 +37,13 @@ The audio streaming system consists of a *server*, multiple *players* and *remot
 
 - The **remotes** are used to control the players. You can select the music to play or change the volume, add groups for synchronization and much more. By default, LMS provides a web interface acting as a remote. There are also apps like [Squeezer](https://play.google.com/store/apps/details?id=uk.org.ngo.squeezer&hl=de) for Android and [iPeng](https://apps.apple.com/de/app/ipeng/id767266886) for iOS. These use the CLI exposed by the server, which you can also use to control the system from other solutions like your smart home.
 
-The three components can be separate or combined into one device. LMS for example is a server and a remote as it not just streams the audio to the players but like i mentioned also acts as a remote as it provides a web interface to control the players.
+The three components can be separate or combined into one device. LMS for example is a server and a remote as it not just streams the audio to the players but like I mentioned also acts as a remote as it provides a web interface to control the players.
 
 The [piCorePlayer project](https://www.picoreplayer.org/) for example offers ready-to-use images for the Raspberry Pi where you can choose which of the three components you want to combine. If you want a simple solution with additional web based management of your players, you can go with that. If you want to run other software on your Pi side-by-side, you would want to set up Squeezelite by yourself instead as piCorePlayer uses a trimmed down Linux. Next to the installation of Squeezelite we'll also have a look at the setup of the LMS and remotes.
 
 ## Setup
 
-I want to set up a dedicated LMS server as well as some players which I can connect to already existing loudspeakers. You can also just use your laptop as a player, or even build your own wireless speaker with a Raspberry Pi, an amp and a passive speaker. I try to describe the setup as general as possible to be suitable for every scenario. 
+I want to set up a dedicated LMS server as well as some players which I can connect to already existing loudspeakers. You can also just use your laptop as a player or even build your own wireless speaker with a Raspberry Pi, an amp and a passive speaker. I try to describe the setup as general as possible to be suitable for every scenario. 
 
 ### Hardware
 
@@ -51,7 +51,7 @@ I want to set up a dedicated LMS server as well as some players which I can conn
 
 - **Player**: If you just want to try out LMS quickly you can use your PC/Laptop as a player. For a standalone solution you would want to use a dedicated system which is connected to existing speakers or build yourself a Wi-Fi speaker. 
 
-- **Remote**: You can use the web interface provided by LMS on any device or install the mobile apps which I introduced before on your phone.
+- **Remote**: You can use the web interface provided by LMS on any device or install the mobile apps, which I introduced before, on your phone.
 
 I'm going to use my NAS for the server as well as the LMS web interface and my mobile phone as a remote. For the players I use two Raspberry Pi Zero W's as I already have those in my bedroom and livingroom next to my audio equipment. I used an [miniHDMI2VGA adapter](https://www.aliexpress.com/item/32604648728.html) with an audio output for around 2-3 € for the audio output from the Raspberry Pi. In my opinion, this already provides a decent audio quality. If you want to go further you could also use a USB soundcard or a [HiFiBerry shield](https://www.hifiberry.com/products/).
 
@@ -63,7 +63,7 @@ I'm going to use my NAS for the server as well as the LMS web interface and my m
 </div>
 
 - **Player**: I would recommend [Squeezelite](https://sourceforge.net/projects/lmsclients/files/squeezelite/) as the most popular one. You can find other cross-plattform players [here](https://sourceforge.net/projects/lmsclients/files/).  
-After downloading Squeezelite you can list available output devices and start it with different options, here are some of the most useful ones:
+After downloading Squeezelite you can list available output devices and start it with different options. Here are some of the most useful ones:
 
   ```bash
   squeezelite -?                      # list all parameters
@@ -87,4 +87,4 @@ That's it for the basic setup and usage. You should have a look at all the featu
   
   It also supports using your multiroom audio system as an audio sink to play sounds or make announcements in multiple or specific rooms of your house.
 
-- I also use my Raspberry Pi's as bluetooth audio receivers together with Darkice and Icecast to create a private radio stream. This radio stream can be used within LMS to stream audio from my phone via bluetooth to to multiple rooms in the house.
+- I also use my Raspberry Pi's as bluetooth audio receivers together with Darkice and Icecast to create a private radio stream. This radio stream can be used within LMS to stream audio from my phone via bluetooth to multiple rooms in the house.
