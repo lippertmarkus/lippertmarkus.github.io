@@ -9,7 +9,7 @@ Let's Encrypt offers free certificates for securing your website with TLS. It us
 
 Currently DSM only supports the HTTP-01 challenge type, where a file is placed on your web server and is retrieved by Let's Encrypt for verification. Like the [documentation](https://letsencrypt.org/docs/challenge-types/) describes, this challenge type has a few drawbacks. If your NAS is not connected to the Internet, you have multiple web servers, you don't want to/can't open port 80 or you want to use wildcard certificates, you would need to use the DNS-01 challenge instead. With the DNS-01 challenge you create a TXT DNS record for your domain for the verification process. 
 
-While DSM doesn't natively support DNS-01, it can be automated too if your DNS provider provides an API. DSM makes it a bit tricky as our certificate is placed in multiple directories for multiple different applications. Instead of trying to identify all those locations, the described way uses the DSM web API which handles all of that automatically. 
+While DSM doesn't natively support DNS-01, it can be automated too if your DNS provider provides an API. DSM makes it a bit tricky as our certificate is placed in multiple directories for multiple different applications. Instead of trying to identify all those locations, the described way uses the DSM web API, which handles all of that automatically. 
  
 ## TL;DR
 
@@ -19,11 +19,11 @@ Go straight to the [usage](#usage).
 
 While there exist many ACME clients for DNS-01 validation, [`acme.sh`](https://github.com/acmesh-official/acme.sh) is a very popular one without external dependencies and therefore perfect for the use on your Synology NAS. Renewing your certificate using the [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/) can only be automated if your DNS provider offers API access. You can check the list of supported DNS providers in the [`acme.sh` wiki](https://github.com/acmesh-official/acme.sh/wiki/dnsapi).
 
-While researching I found [a wiki entry (old way, don't use it!)](https://github.com/acmesh-official/acme.sh/wiki/Synology-NAS-Guide/865933612054fd68960a18f889b40ef16a80af1f#configuring-certificate-renewal) describing the manual renewal and replacement of all copies of the certificate of all apps. I worked on an improved [python script (another old way, don't use it!)](https://github.com/lippertmarkus/synology-le-dns-auto-renew) as a replacement and was already finished when I found that a few days before [tresni](https://github.com/tresni) created a [deployment hook for Synology DSM](https://github.com/acmesh-official/acme.sh/pull/2369) which provides an even more elegant solution!
+While researching I found [a wiki entry (old way, don't use it!)](https://github.com/acmesh-official/acme.sh/wiki/Synology-NAS-Guide/865933612054fd68960a18f889b40ef16a80af1f#configuring-certificate-renewal) describing the manual renewal and replacement of all copies of the certificate of all apps. I worked on an improved [python script (another old way, don't use it!)](https://github.com/lippertmarkus/synology-le-dns-auto-renew) as a replacement and was already finished when I found that a few days before [tresni](https://github.com/tresni) created a [deployment hook for Synology DSM](https://github.com/acmesh-official/acme.sh/pull/2369), which provides an even more elegant solution!
 
 It uses the DSM web API for importing the certificate. This way you don't need to manually find all the directories with copies of your certificate as DSM handles everything for you, including restarting applications when needed.
 
-As I'm using two-factor authentication on my NAS and didn't want to disable it to use the deployment hook. I created a [pull request](https://github.com/acmesh-official/acme.sh/pull/2782) which adds support for it.
+As I'm using two-factor authentication on my NAS and didn't want to disable it to use the deployment hook I created a [pull request](https://github.com/acmesh-official/acme.sh/pull/2782), which adds support for it.
 
 ## Usage
 
@@ -41,7 +41,7 @@ sudo mv /usr/local/share/acme.sh-dev/ /usr/local/share/acme.sh # currently using
 sudo chown -R mycertadmin /usr/local/share/acme.sh/  # use your newly created admin user
 ```
 
-The first issuance and deployment is done manually. `acme.sh` stores all your settings and credentials so that the renewal can happen automatically in the future. Have a look in the [`acme.sh` wiki](https://github.com/acmesh-official/acme.sh/wiki/dnsapi) to find out the parameters you need to set for your DNS provider:
+The first issuance and deployment is done manually. `acme.sh` stores all your settings and credentials, so that the renewal can happen automatically in the future. Have a look in the [`acme.sh` wiki](https://github.com/acmesh-official/acme.sh/wiki/dnsapi) to find out the parameters you need to set for your DNS provider:
 ```bash
 cd /usr/local/share/acme.sh
 # set environment variables for your DNS provider and your used DNS API
@@ -84,7 +84,7 @@ This recurring task automatically renews your certificate and deploys it to your
 
 ### Bonus: Deploy with enabled two-factor authentication
 
-Like mentioned before, I'm using two-factor authentication on my NAS and didn't want to disable it to use the deployment hook. I created a [pull request](https://github.com/acmesh-official/acme.sh/pull/2782) which adds support for supplying a known device ID while authenticating so that DSM doesn't ask for an OTP code.
+Like mentioned before, I'm using two-factor authentication on my NAS and didn't want to disable it to use the deployment hook. I created a [pull request](https://github.com/acmesh-official/acme.sh/pull/2782), which adds support for supplying a known device ID while authenticating, so that DSM doesn't ask for an OTP code.
 
 To use the device ID you can follow these steps:
 1. Open DSM inside an incognito tab and login with your newly created admin user.
