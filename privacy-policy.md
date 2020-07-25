@@ -190,7 +190,7 @@ Further information and the applicable data protection provisions of Google may 
 
 ## 8. DISQUS comment function
 
-On the basis of our legitimate interests in an efficient, secure and user-friendly comment management pursuant to Art. 6 para. 1 lit. f. DSGVO the commentary service DISQUS, offered by DISQUS, Inc. 301 Howard St, Floor 3 San Francisco, California- 94105, USA, is used. DISQUS is GDPR compliant: [https://blog.disqus.com/update-on-privacy-and-gdpr-compliance](https://blog.disqus.com/update-on-privacy-and-gdpr-compliance).
+On the basis of our legitimate interests in an efficient, secure and user-friendly comment management pursuant to Art. 6 para. 1 lit. f. DSGVO the commentary service DISQUS, offered by DISQUS, Inc. 301 Howard St, Floor 3 San Francisco, California- 94105, USA, is used.
 
 To use the DISQUS comment function, users can log in via their own DISQUS user account or an existing social media account (e.g. OpenID, Facebook, Twitter or Google). DISQUS obtains the user's login data from the platforms. It is also possible to use the DISQUS comment function as a guest, without creating or using user accounts at DISQUS or one of the specified social media providers.
 
