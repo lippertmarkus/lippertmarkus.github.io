@@ -190,7 +190,7 @@ Further information and the applicable data protection provisions of Google may 
 
 ## 8. DISQUS comment function
 
-On the basis of our legitimate interests in an efficient, secure and user-friendly comment management pursuant to Art. 6 para. 1 lit. f. DSGVO the commentary service DISQUS, offered by DISQUS, Inc. 301 Howard St, Floor 3 San Francisco, California- 94105, USA, is used.
+On the basis of our legitimate interests in an efficient, secure and user-friendly comment management pursuant to Art. 6 para. 1 lit. f. GDPR the commentary service DISQUS, offered by DISQUS, Inc. 301 Howard St, Floor 3 San Francisco, California- 94105, USA, is used.
 
 To use the DISQUS comment function, users can log in via their own DISQUS user account or an existing social media account (e.g. OpenID, Facebook, Twitter or Google). DISQUS obtains the user's login data from the platforms. It is also possible to use the DISQUS comment function as a guest, without creating or using user accounts at DISQUS or one of the specified social media providers.
 
@@ -198,11 +198,11 @@ We only embed DISQUS with its functions into our website, whereby we can influen
 
 ## 9. Collection of access data and log files
 
-We, or our hosting provider, collect the following data on the basis of our legitimate interests within the meaning of Art. 6 para. 1 lit. f. DSGVO data on each access to the server on which this service is located (so-called server log files). Access data can include among others the name of the accessed website, file, date and time of access, transferred data volume, notification of successful access, browser type and version, the user's operating system, referrer URL (the previously visited page), IP address and the requesting provider.
+We, or our hosting provider, collect the following data on the basis of our legitimate interests within the meaning of Art. 6 para. 1 lit. f. GDPR data on each access to the server on which this service is located (so-called server log files). Access data can include among others the name of the accessed website, file, date and time of access, transferred data volume, notification of successful access, browser type and version, the user's operating system, referrer URL (the previously visited page), IP address and the requesting provider.
 
 ## 10. Contact
 
-When contacting us (e.g. via contact form, e-mail, telephone or social media), the user's details are processed for processing the contact enquiry and its processing in accordance with Art. 6 para. 1 lit. b) DSGVO. 
+When contacting us (e.g. via contact form, e-mail, telephone or social media), the user's details are processed for processing the contact enquiry and its processing in accordance with Art. 6 para. 1 lit. b) GDPR. 
 
 We delete the requests if they are no longer necessary. 
 
