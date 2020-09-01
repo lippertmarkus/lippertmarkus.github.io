@@ -19,7 +19,7 @@ In case you don't want to use the Terraform definitions and create the cluster b
 
 ## Details
 
-In the following I give you short background around Kubernetes, Rancher, Terraform and Vagrant. I explain in more detail what VMs you need and how you would set them up as well as create a new cluster via Rancher and add Nodes to that cluster.
+In the following I give you short background around Kubernetes, Rancher, Terraform and Vagrant. I explain in more detail what VMs you need and how you would set them up as well as create a new cluster via Rancher and add nodes to that cluster.
 
 ### Background
 
@@ -27,7 +27,7 @@ In the following I give you short background around Kubernetes, Rancher, Terrafo
 
 [Rancher](https://rancher.com/) helps with provisioning, managing and monitoring multiple Kubernetes clusters as well as deploying workloads onto them. It also provides security and user management.
 
-[Terraform](https://www.terraform.io/) allows you to define infrastructure as code to fully automate the management of infrastructure with different cloud providers as well as services. Terraform has a [registry](https://registry.terraform.io/) with dozens of official and community providers and modules to simplify the interaction with the cloud provider and service APIs. I used Terraform to automatically set up the infrastructure either on [Azure](https://azure.microsoft.com/en-us/) locally via Vagrant. [Vagrant](https://www.vagrantup.com/) automates the creation and provisioning of local VMs with different hypervisors like Hyper-V, Virtualbox and others. Vagrant provides a [registry for Boxes](https://app.vagrantup.com/boxes/search) which are basically VM images.
+[Terraform](https://www.terraform.io/) allows you to define infrastructure as code to fully automate the management of infrastructure with different cloud providers as well as services. Terraform has a [registry](https://registry.terraform.io/) with dozens of official and community providers and modules to simplify the interaction with the cloud provider and service APIs. I used Terraform to automatically set up the infrastructure either on [Azure](https://azure.microsoft.com/en-us/) or locally via Vagrant. [Vagrant](https://www.vagrantup.com/) automates the creation and provisioning of local VMs with different hypervisors like Hyper-V, Virtualbox and others. Vagrant provides a [registry for Boxes](https://app.vagrantup.com/boxes/search) which are basically VM images.
 
 ### Architecture
 
@@ -94,7 +94,7 @@ terraform apply -auto-approve -var 'vagrant_enable=true' -var 'vagrant_vswitch=m
 
 The parameter `vagrant_vswitch` must be set to the name of a virtual switch with external connectivity. It can be found via the *Manager for virtual switches* inside the *Hyper-V Manager*.
 
-When using Vagrant the initial download of the VM Images (*Boxes*) takes a bit depending on your network. Afterwards, regardless of whether you use Azure or Hyper-V, the setup of the mixed cluster takes around 10 minutes. After completion of the `terraforma apply` command you get the URL to access the Rancher UI as well as the admin credentials:
+When using Vagrant the initial download of the VM Images (*Boxes*) takes a bit depending on your network. Afterwards, regardless of whether you use Azure or Hyper-V, the setup of the mixed cluster takes around 10 minutes. After completion of the `terraform apply` command you get the URL to access the Rancher UI as well as the admin credentials:
 ```bash
 # ...
 Apply complete! Resources: 27 added, 0 changed, 0 destroyed.
@@ -120,4 +120,4 @@ Here's an example on how to use Rancher to deploy a simple Windows application t
 
 Rancher greatly simplifies the setup of a mixed Kubernetes cluster so you can get started quickly. Keep in mind that this is just a test environment. It's great for getting a deeper knowledge of all the components. 
 
-For a production environment most people tend to use a hosted Kubernetes service like AKS which you could also [manage via Rancher](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/hosted-kubernetes-clusters/aks/). If you instead want to build your own, you should run Rancher in a seperate Kubernetes cluster with a load balancer to enable high-availability like explained in [the docs](https://rancher.com/docs/rancher/v2.x/en/installation/how-ha-works/). You can also find [recommendations](https://rancher.com/docs/rancher/v2.x/en/installation/k8s-install/create-nodes-lb/) and [a checklist](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/production/) about production Kubernetes clusters managed by Rancher there.
+For a production environment most people tend to use a hosted Kubernetes service like AKS which you could also [manage via Rancher](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/hosted-kubernetes-clusters/aks/) or the Azure Portal itself. If you instead want to build your own, you should run Rancher in a seperate Kubernetes cluster with a load balancer to enable high-availability like explained in [the docs](https://rancher.com/docs/rancher/v2.x/en/installation/how-ha-works/). You can also find [recommendations](https://rancher.com/docs/rancher/v2.x/en/installation/k8s-install/create-nodes-lb/) and [a checklist](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/production/) about production Kubernetes clusters managed by Rancher there.
