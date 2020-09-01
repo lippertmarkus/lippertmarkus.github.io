@@ -13,7 +13,7 @@ Go directly to the [setup of the Chart Releaser GitHub Action](#setting-up-the-c
 
 ## Background
 
-[Kubernetes](https://kubernetes.io) is a container orchestration system which makes deploying and managing containerized applications easy. Kubernetes itself uses multiple YAML files to define all resources an application needs. Managing multiple such files is rather cumbersome and the configurations are static, they aren't easily portable. This is where Helm comes in.
+[Kubernetes](https://kubernetes.io) is a container orchestration system which makes deploying and managing containerized applications easy. Kubernetes itself uses multiple YAML files to define all resources an application needs. Managing multiple such files is rather cumbersome and as the configurations are static, they aren't easily portable. This is where Helm comes in.
 
 [Helm](https://helm.sh) is currently the de-facto package manager for Kubernetes and makes the installation and management of applications easy. It bundles Kubernetes resources within a Helm Chart. It also allows to parameterize the YAML files, making the applications reusable and simplifying the installation.
 
