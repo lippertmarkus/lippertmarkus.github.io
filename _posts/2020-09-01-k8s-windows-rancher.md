@@ -2,7 +2,7 @@
 title: "Easily create Kubernetes Clusters with Windows Support via Rancher"
 image: "/img/thumbnails/k8s-win-rancher.png"
 bigimg: "/img/ship-wheel2.jpg"
-tags: [Kubernetes,Containers,Windows,Docker]
+tags: [Kubernetes,Containers,Windows,Docker,Azure]
 ---
 
 Kubernetes [supports Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/) since v1.14 and with the latest releases the support got even better. All managed Kubernetes services of the major cloud providers support Windows containers. Microsoft as one of them [announced](https://azure.microsoft.com/en-us/blog/announcing-the-general-availability-of-windows-server-containers-and-private-clusters-for-azure-kubernetes-service/) the general availability of Windows containers for Azure Kubernetes Service (AKS) in April 2020. 
