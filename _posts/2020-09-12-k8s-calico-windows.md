@@ -15,7 +15,7 @@ You need to install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/i
 
 ```bash
 # Create a mixed Kubernetes cluster with Calico for Windows
-git clone https://github.com/lippertmarkus/terraform-azurerm-k8slightroosafd-calico-windows.git
+git clone https://github.com/lippertmarkus/terraform-azurerm-k8s-calico-windows.git
 cd terraform-azurerm-k8s-calico-windows
 az login   # log in to your Azure account
 terraform init  # initialize terraform
