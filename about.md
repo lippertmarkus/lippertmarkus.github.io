@@ -4,14 +4,8 @@ title: About
 bigimg: /img/about-big.jpg
 ---
 
-## Education
-- **2019-2021**: [DHBW Center for Advanced Studies](https://www.cas.dhbw.de/en/), Master of Science (computer science), Cooperative Master's
-- **2018-2019**: [DHBW Center for Advanced Studies](https://www.cas.dhbw.de/en/), Contact studies as a preperation for Cooperative Master's (computer science)
-- **2015-2018**: [DHBW Stuttgart](https://www.dhbw-stuttgart.de/), Bachelor of Science (applied computer science), Cooperative Bachelor's
+This is the personal blog of Markus Lippert. I'm a technology enthusiast living near Ulm, a city in the south of Germany. I currently work for Axians Infoma as a software developer and I'm also a Master's student in computer science.
 
-## Work Experience
-- **2018-Today**: Software developer tooling at [Axians Infoma](https://www.axians-infoma.de/)
-- **2015-2018**: Software developer (Dual study program, see above) at [Axians Infoma](https://www.axians-infoma.de/)
+I mostly write about DevOps, Containers, Orchestration, Cloud-native, IaC and Azure. Refer to my [GitHub profile](https://github.com/lippertmarkus) if you want to know more about the technologies I work with and what I'm currently doing in the open-source space. In my [LinkedIn profile](https://www.linkedin.com/in/lippertmarkus/) you can find information around my career, professional experience and past projects.
 
-## Certifications
-{% include certs.html %}
+When I'm not busy trying out new technologies, I also love to work on my personal development by doing sports, hiking or reading.
