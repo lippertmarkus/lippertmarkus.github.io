@@ -5,7 +5,7 @@ bigimg: "/img/bc-k8s.jpg"
 tags: [Kubernetes,Containers,Windows,Azure,Business Central,DevOps]
 ---
 
-Running the ERP system Microsoft Dynamics 365 Business Central is facilitated through Docker and [the official images](https://github.com/microsoft/nav-docker/) Microsoft provides. Taking this one step further and deploying Business Central to a cluster can be challenging however. Container orchestrators like Kubernetes provide additional benefits like scalability and high availability but also introduce new complexity. To overcome some of this complexity, [Helm](https://helm.sh/) simplifies the installation of applications. Leveraging this, I created a [Helm chart for Business Central](https://artifacthub.io/packages/helm/lippertmarkus/business-central) with the goal to simplify the deployment of Business Central within a cluster.
+Running the ERP system Microsoft Dynamics 365 Business Central is facilitated through Docker and [the official images](https://github.com/microsoft/nav-docker/) Microsoft provides. Taking this one step further and deploying Business Central to a cluster can be challenging however. I recently did a [small survey](https://forms.microsoft.com/Pages/AnalysisPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAK03qWdUOTNKU1JSRUNMVkVSQ1NSWEFNRzYzRTFGSS4u&AnalyzerToken=xuLooFWnazmZIokaZcqqVBC2m0CeCTwY) and found it interesting that using Container orchestration for Business Central seems to be an exception. Container orchestrators like Kubernetes provide additional benefits like scalability and high availability but also introduce new complexity. To overcome some of this complexity, [Helm](https://helm.sh/) simplifies the installation of applications. Leveraging this, I created a [Helm chart for Business Central](https://artifacthub.io/packages/helm/lippertmarkus/business-central) with the goal to simplify the deployment of Business Central within a cluster.
 
 ## TL;DR
 
@@ -91,12 +91,12 @@ While the Helm chart for Business Central already makes deployment more easy it 
 I already described all those scenarios [in detail in the documentation](https://artifacthub.io/packages/helm/lippertmarkus/business-central#using-artifacts-and-pre-built-images) of the chart, so I won't repeat them here. Now that you got the basics set up, you can head over to the [Business Central Helm Chart on Artifact HUB](https://artifacthub.io/packages/helm/lippertmarkus/business-central#using-artifacts-and-pre-built-images) and try them out! You can use the configuration described there with the Business Central environment you installed before like:
 
 ```powershell
-# upgrade the existing instance
+# Upgrade the existing instance
 helm upgrade -i bc1 lippertmarkus/business-central -f config.yml --set service.type=LoadBalancer
 ```
 
 ## There's more
 
-If you're curious how the source of the Chart looks like, have a look at the [GitHub repo](https://github.com/lippertmarkus/helm-charts/tree/master/charts/business-central). I'm also happy if you would like to contribute to the Helm chart.
+If you're curious how the source of the Chart looks like, have a look at the [GitHub repo](https://github.com/lippertmarkus/helm-charts/tree/master/charts/business-central). I'm also open to contributions if anyone of you want to help improve the Helm chart further.
 
 For a detailed reference of all available configuration options of the Helm chart, have a look at the [Configuration reference](https://artifacthub.io/packages/helm/lippertmarkus/business-central#configuration-reference). Next to the ones described in the [common scenarios](https://artifacthub.io/packages/helm/lippertmarkus/business-central#common-scenarios), there are also a lot of Kubernetes-specific ones.
