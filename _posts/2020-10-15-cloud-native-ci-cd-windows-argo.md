@@ -22,19 +22,15 @@ terraform init  # initialize terraform
 terraform apply -auto-approve  # provision infrastructure
 terraform output kube_config > ~/.kube/config  # store the kube config as default (be careful if you already have one!)
 
-# Install Argo into the cluster: allow external access, create RBAC resources for default service account for running workflows and use the currently newest image with Windows support
+# Install Argo into the cluster: allow external access, create RBAC resources for default service account for running workflows
 helm repo add argo https://argoproj.github.io/argo-helm
-helm install argo argo/argo -n argo --create-namespace --set server.serviceType=LoadBalancer --set workflow.serviceAccount.name=default --set workflow.rbac.create=true --set images.tag=v2.11.0
+helm install argo argo/argo -n argo --create-namespace --set server.serviceType=LoadBalancer --set workflow.serviceAccount.name=default --set workflow.rbac.create=true
 kubectl get svc -n argo  # Get external IP for accessing Argo UI
 ```
 
 Now open `http://<external-ip>:2746` in your browser and deploy your first hybrid workflow like described [later in this post](#schedule-hybrid-workflows).
 
 ## Details
-
-[Kubernetes](https://kubernetes.io) is a container orchestration system which makes deploying and managing containerized applications easy. Kubernetes itself uses multiple YAML files to define all resources an application needs. Managing multiple such files is rather cumbersome and as the configurations are static, they aren't easily portable. This is where Helm comes in. [Helm](https://helm.sh) is currently the de-facto package manager for Kubernetes and makes the installation and management of applications like Argo easy. It bundles Kubernetes resources within a Helm Chart. 
-
-[Terraform](https://www.terraform.io/) allows you to define infrastructure as code to fully automate the management of infrastructure with different cloud providers as well as services. Terraform has a [registry](https://registry.terraform.io/) with dozens of official and community providers and modules to simplify the interaction with the cloud provider and service APIs. I used Terraform to automatically set up a Azure Kubernetes Service (AKS) cluster with Linux and Windows nodes on [Azure](https://azure.microsoft.com/en-us/).
 
 ### Windows container support in Argo
 
@@ -44,7 +40,7 @@ Of the new generation CI/CD solutions in the CNCF Landscape I looked at, the eff
 
 I created Terraform definitions for creating an AKS cluster with both a Linux and Windows node pool. There's also [documentation](https://docs.microsoft.com/de-de/azure/aks/windows-container-cli) on how you would do the same manually with the Azure Cloud Shell. Alternatively to the managed AKS cluster you could also create your own custom Kubernetes cluster with Windows support on Azure or locally like I described in a [previous post]({% post_url 2020-09-01-k8s-windows-rancher %}).
 
-However, using a managed AKS cluster is the easiest and quickest solutions. You need to install [Git](https://git-scm.com/downloads), the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&tabs=azure-cli) and [Terraform](https://www.terraform.io/downloads.html) itself. Use the commands below to clone the Git repository, log in to Azure and provision the cluster if you don't already have one to work with:
+Here's how you can quickly create a managed AKS cluster. You need to install [Git](https://git-scm.com/downloads), the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&tabs=azure-cli) and [Terraform](https://www.terraform.io/downloads.html) itself. Use the commands below to clone the Git repository, log in to Azure and provision the cluster if you don't already have one to work with:
 
 ```bash
 # Create a Kubernetes cluster with AKS (optional if you already have one)
@@ -65,9 +61,9 @@ The easiest way to install Argo in your cluster is to use the community-maintain
 For using the chart you need to install [Helm](https://helm.sh/docs/intro/install/) as well as [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/). You can then add the community-maintained Helm repository and easily install Argo:
 
 ```bash
-# Install Argo into the cluster: allow external access, create RBAC resources for default service account for running workflows and use the currently newest image with Windows support
+# Install Argo into the cluster: allow external access, create RBAC resources for default service account for running workflows
 helm repo add argo https://argoproj.github.io/argo-helm
-helm install argo argo/argo -n argo --create-namespace --set server.serviceType=LoadBalancer --set workflow.serviceAccount.name=default --set workflow.rbac.create=true --set images.tag=v2.11.0
+helm install argo argo/argo -n argo --create-namespace --set server.serviceType=LoadBalancer --set workflow.serviceAccount.name=default --set workflow.rbac.create=true
 kubectl get svc -n argo  # Get external IP for accessing Argo UI
 ```
 
