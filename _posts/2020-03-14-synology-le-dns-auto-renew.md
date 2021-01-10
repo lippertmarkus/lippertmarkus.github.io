@@ -33,11 +33,11 @@ While you could use any administration user, I suggest you create a new one via 
 
 Temporarily enable SSH via `Control Panel ➡ Terminal & SNMP ➡ Enable SSH service`. Login via SSH with your newly created admin user.
 
-Next we download `acme.sh` (the `dev` branch as the change isn't available in the `master` branch yet) to `/usr/local/share/acme.sh/`:
+Next we download `acme.sh` to `/usr/local/share/acme.sh/`:
 ```bash
-wget -O /tmp/acme.sh.zip https://github.com/acmesh-official/acme.sh/archive/dev.zip # currently using dev branch
+wget -O /tmp/acme.sh.zip https://github.com/acmesh-official/acme.sh/archive/master.zip
 sudo 7z x -o/usr/local/share /tmp/acme.sh.zip
-sudo mv /usr/local/share/acme.sh-dev/ /usr/local/share/acme.sh # currently using dev release
+sudo mv /usr/local/share/acme.sh-master/ /usr/local/share/acme.sh
 sudo chown -R mycertadmin /usr/local/share/acme.sh/  # use your newly created admin user
 ```
 
