@@ -49,7 +49,7 @@ cd /usr/local/share/acme.sh
 
 # set deployment options, see https://github.com/acmesh-official/acme.sh/wiki/deployhooks#20-deploy-the-cert-into-synology-dsm
 #export SYNO_Scheme="http"  # Can be set to HTTPS, defaults to HTTP
-#export SYNO_Host="localhost"  # Specify if not using on localhost
+#export SYNO_Hostname="localhost"  # Specify if not using on localhost
 #export SYNO_Port="5000"  # Port of DSM WebUI, defaults to 5000 for HTTP and 5001 for HTTPS
 export SYNO_Username="mycertadmin"
 export SYNO_Password="MyPassw0rd!"
