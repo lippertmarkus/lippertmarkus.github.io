@@ -45,7 +45,7 @@ The first issuance and deployment is done manually. `acme.sh` stores all your se
 ```bash
 cd /usr/local/share/acme.sh
 # set environment variables for your DNS provider and your used DNS API
-./acme.sh --issue -d "*.example.com" --dns dns_cf --home $PWD
+./acme.sh --issue -d "*.example.com" --dns dns_cf --home $PWD --server letsencrypt
 
 # set deployment options, see https://github.com/acmesh-official/acme.sh/wiki/deployhooks#20-deploy-the-cert-into-synology-dsm
 #export SYNO_Scheme="http"  # Can be set to HTTPS, defaults to HTTP
