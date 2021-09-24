@@ -18,12 +18,13 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 dockerd --register-service
 Start-Service dockerd
 docker run hello-world
-# Hello from Docker!
 ```
+
+Docker then greets you with *Hello from Docker!*. Now on to the Linux containers.
 
 ## Linux Containers
 
-For **Linux containers** you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install). You can e.g. use an (already existing) Ubuntu distribution and install Docker like explained [in the docs](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository). Here are the commands: 
+For Linux containers you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install). You can e.g. use an (already existing) Ubuntu distribution and install Docker like explained [in the docs](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository). Here are the commands: 
 
 ```bash
 sudo apt-get update
@@ -39,6 +40,8 @@ sudo docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+
+Now you're ready to run Linux containers as well. As a next step we also would like to run them simultaneously.
 
 ## Easily run Windows and Linux containers simultaneously
 
@@ -57,15 +60,17 @@ On Windows create a new context for the WSL host via PowerShell:
 docker context create lin --docker host=tcp://127.0.0.1:2376
 ```
 
-Now you can easily **run Windows and Linux containers simultaneously** without switching like in Docker Desktop:
+Now you can easily run Windows and Linux containers simultaneously without switching like in Docker Desktop:
 ```powershell
 > docker ps
-CONTAINER ID   IMAGE                                       COMMAND               CREATED         STATUS        PORTS     NAMES                                                                                                                                                                                               edb2101c52ed   mcr.microsoft.com/windows/nanoserver:1809   "ping -t localhost"   2 seconds ago   Up 1 second             wincontainer
+CONTAINER ID   IMAGE                                       COMMAND               CREATED         STATUS        PORTS     NAMES
+edb2101c52ed   mcr.microsoft.com/windows/nanoserver:1809   "ping -t localhost"   2 seconds ago   Up 1 second             wincontainer
 
 > docker -c lin ps
-CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES                                                                                                                                                                                                                             94e165427f9c   nginx     "/docker-entrypoint.…"   4 seconds ago   Up 3 seconds   80/tcp    lincontainer  
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+94e165427f9c   nginx     "/docker-entrypoint.…"   4 seconds ago   Up 3 seconds   80/tcp    lincontainer  
 ```
 
 ## Conclusion
 
-You may not even need Docker Desktop if you're a power user not using the GUI. Docker Desktop does a lot of plumbing in the background for you but running it by yourself isn't hard either. And sometimes it's also fun to have a bit more insight on what's going on.
+You may not even need Docker Desktop if you're a poweruser not using the GUI. Docker Desktop does a lot of plumbing in the background for you but running it by yourself isn't hard either. And sometimes it's also fun to have a bit more insight on what's going on behind the scenes.
