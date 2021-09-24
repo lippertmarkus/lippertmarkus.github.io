@@ -16,7 +16,7 @@ Expand-Archive docker.zip -DestinationPath C:\
 [Environment]::SetEnvironmentVariable("Path", "$($env:path);C:\docker", [System.EnvironmentVariableTarget]::Machine)
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 dockerd --register-service
-Start-Service dockerd
+Start-Service docker
 docker run hello-world
 ```
 
