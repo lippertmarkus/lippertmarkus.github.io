@@ -24,7 +24,7 @@ Docker then greets you with *Hello from Docker!*. Now on to the Linux containers
 
 ## Linux Containers
 
-For Linux containers you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install) or you can use an (already existing) Ubuntu distribution. Before you can install Docker you need to enable systemd:
+For Linux containers you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install) or you can use an already existing Ubuntu distribution. Before you can install Docker you need to enable systemd with a little hack:
 ```bash
 sudo apt-get update
 sudo apt install -yqq fontconfig daemonize
