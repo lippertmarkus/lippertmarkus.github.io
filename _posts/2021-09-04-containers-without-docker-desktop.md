@@ -57,7 +57,7 @@ sudo systemctl restart docker.service
 
 On Windows create a new context for the WSL host via PowerShell:
 ```powershell
-docker context create lin --docker host=tcp://127.0.0.1:2376
+docker context create lin --docker host=tcp://127.0.0.1:2375
 ```
 
 Now you can easily run Windows and Linux containers simultaneously without switching like in Docker Desktop:
