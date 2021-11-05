@@ -5,7 +5,9 @@ bigimg: "/img/lock.jpg"
 tags: [Containers,Kubernetes,Windows]
 ---
 
-Kubernetes v1.22+ together with containerd v1.6+ [introduced HostProcess containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/) for Windows nodes as an alpha feature. Like priviledged Linux containers this allows for many management scenarios like driver, networking and storage provisioning where host access is needed. Proxy tools like [`wins`](https://github.com/rancher/wins/) or [`csi-proxy`](https://github.com/kubernetes-csi/csi-proxy) are now no longer needed.
+Kubernetes v1.22+ together with containerd v1.6+ [introduced HostProcess containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/) for Windows nodes as an alpha feature. Like priviledged Linux containers this allows for many management scenarios like driver, networking and storage provisioning where host access is required. Running proxy tools like [`wins`](https://github.com/rancher/wins/) or [`csi-proxy`](https://github.com/kubernetes-csi/csi-proxy) on the host is now no longer needed. 
+
+I'll describe how you can set up a cluster with HostProcess container support by yourself before going into the technical aspects. If you don't want to try it out yourself, feel free to directly jump to the [introduction of HostProcess containers](#intro-to-windows-hostprocess-containers).
 
 ## Setting up a cluster with HostProcess Container support
 
