@@ -26,7 +26,7 @@ Alternatively you could also use the [Kubernetes Cluster API](https://cluster-ap
 Windows HostProcess Containers run directly on the host and have neither filesystem nor networking or process isolation. They are sharing the host's filesystem, process and networking space. Under the hood HostProcess containers are using Windows Job Objects instead of the server silos used by normal Windows containers. See [this diagram](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/#how-does-it-work) for an overview of the overall architecture differences. Because of this architecture there are further special considerations when it comes to running HostProcess containers:
 
 - The version of the base image does not need to match the host OS version because HostProcess containers directly use the host's kernel.
-- Per-design you can't exec into HostProcess containers
+- Currently there's not TTY support when exec into HostProcess containers
 - HostProcess pods currently can only consist of HostProcess containers. Standard Windows Server containers are not supported in the same pod. 
 - Resource limits for disk, memory or CPU count work the same as for normal containers.
 - Mounting named pipes is not supported. They can instead be accessed directly via their path on the host.
@@ -131,3 +131,4 @@ Nevertheless Windows HostProcess pods will greatly simplify management and admin
 - Filesystem layout may change again to present the filesystem similar to normal Windows pods to easier access files in the container filesystem from Scripts or client libraries
 - Support for mounting Unix domain sockets
 - Running Container Storage Interface (CSI)-proxy as a daemon set
+- Support for TTY when exec into a container
