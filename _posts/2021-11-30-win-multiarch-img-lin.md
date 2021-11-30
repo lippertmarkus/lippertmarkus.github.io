@@ -17,7 +17,7 @@ You can cross-build multi-arch Windows images on Linux using BuildKit as long as
 
 Try to move the plumbing that requires `RUN` instructions (like cross-compiling, downloading binaries/libs/dependencies, creating directory structures/configs etc.) to a Linux build stage and copy the results over to the Windows image. Examples:
 
-(a) Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image
+(a) Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image:
 
 ```dockerfile
 ARG WINBASE
@@ -31,7 +31,7 @@ ENTRYPOINT [ "app.exe" ]
 COPY --from=build /src/app/dotnet.exe app.exe
 ```
 
-(b) traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image
+(b) traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image:
 
 ```dockerfile
 ARG WINBASE
@@ -45,7 +45,7 @@ ENTRYPOINT [ "traefik.exe" ]
 COPY --from=build /src/traefik.exe traefik.exe
 ```
 
-(c) Pull external dependencies from single-arch images and copy to Windows image
+(c) Pull external dependencies from single-arch images and copy to Windows image:
 
 ```Dockerfile
 ARG WINBASE
@@ -150,7 +150,7 @@ docker buildx inspect --bootstrap
 
 Note that the output for you can be different depending on your build platform. Also if you use Docker Desktop, [QEMU machine emulators are already installed](https://docs.docker.com/desktop/multi-arch/#multi-arch-support-on-docker-desktop) and more platforms are listed here.
 
-The listed platforms only show on which target platforms you can execute commands, e.g. via `RUN` in your Dockerfile. If you don't need to `RUN` commands on your target platform (i.e. in the `linux` stage of the Dockerfile above) you can build our example Dockerfile for other platforms anyway:
+The listed platforms only show on which target platforms you can execute commands, e.g. via `RUN` in your Dockerfile. If you don't need to `RUN` commands on your target platform (i.e. in the `linux` stage of the [Dockerfile above](#buildkit)) you can build our example Dockerfile for other platforms anyway:
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/arm/v7,linux/arm/v6 --push --pull --target linux -t lippertmarkus/test:1.0 .
 ```
@@ -162,7 +162,7 @@ docker buildx build --platform linux/amd64,linux/arm64,linux/riscv64,linux/ppc64
 
 ### Using QEMU machine emulation
 
-If you now try to run a command on the target platform in the `linux` stage of the Dockerfile e.g. by adding `RUN ["/app"]` at the end of the Dockerfile you'll get an error:
+If you now try to run a command on the target platform in the `linux` stage of the Dockerfile e.g. by adding `RUN ["/app"]` at the end of the [example Dockerfile](#buildkit) you'll get an error:
 ```
 > [linux 2/2] RUN ["/app"]:
 #15 0.181 .buildkit_qemu_emulator: /app: Invalid ELF image for this architecture
@@ -180,7 +180,7 @@ docker buildx inspect --bootstrap
 # Platforms: linux/amd64, linux/386, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/mips64le, linux/mips64, linux/arm/v7, linux/arm/v6
 ```
 
-Running a command on the target architecture in the `linux` stage of the Dockerfile during the build now also works:
+Running a command on the target architecture in the `linux` stage of the [example Dockerfile](#buildkit) during the build now also works:
 ```
 #17 [linux 2/2] RUN ["/app"]
 #17 0.150 Hello World
@@ -197,7 +197,7 @@ Another option would be to use Hyper-V isolated containers to build the multi-ar
 
 ### Cross-building images for Windows on Linux
 
-The same restrictions described for cross-building for Linux multi-arch images also applies to building Windows multi-arch images on Linux: If you don't need to run commands on Windows (i.e. in the `windows` stage of the Dockerfile above) you can build your Windows multi-arch image on Linux similarly to how you build Linux multi-arch images. 
+The same restrictions described for cross-building for Linux multi-arch images also apply to building Windows multi-arch images on Linux: If you don't need to run commands on Windows (i.e. in the `windows` stage of the [Dockerfile above](#buildkit)) you can build your Windows multi-arch image on Linux similarly to how you build Linux multi-arch images. 
 
 For Windows instead of specifying multiple platforms you need to use different base images for each version of Windows. The base image in our example is passed via a build argument `WINBASE` and each image is pushed independently:
 
@@ -234,7 +234,7 @@ The result on Docker Hub looks like this:
   <img class="lazy" alt="Multi-arch Windows image for six different Windows versions" data-src="/assets/posts/win-multiarch-img-lin/docker-hub.png" />
 </div>
 
-More examples are described in the [TL;DR section](#tldr) and [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples).
+More examples for cross-building are described in the [TL;DR section](#tldr) and [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples).
 
 
 ### Using Hyper-V machine emulation on Windows
@@ -253,7 +253,7 @@ ADD https://www.python.org/ftp/python/3.11.0/python-3.11.0a2-amd64.exe python.ex
 RUN ["python.exe", "/quiet"]
 ```
 
-It's important to understand that there are not many cases where Hyper-V isolation is really needed instead of cross-building. To enable cross-building for this specific case here you could try extracting files from the installer in a Linux build stage. Another way would be to build this image natively on Windows a single time as a single-arch image and use it in your cross-build to copy `C:\python` to the target Windows stage similarly to the example (c) in the [TL;DR section](#tldr). I describe some tips on how to avoid using Hyper-V isolation [later](#conclusion) in this post.
+It's important to understand that there are not many cases where Hyper-V isolation is really needed. To enable cross-building for this specific case here you could try extracting files from the installer in a Linux build stage. Another way would be to build this image natively on Windows a single time as a single-arch image and use it in your cross-build to copy `C:\python` to the target Windows stage similarly to the example (c) in the [TL;DR section](#tldr). I describe some tips on how to avoid using Hyper-V isolation [later](#conclusion) in this post.
 
 As [BuildKit doesn't work on Windows](https://docs.docker.com/develop/develop-images/build_enhancements/#limitations) you would need to use the default `docker build` command instead with Hyper-V isolation enabled to create the Windows container images:
 ```powershell
@@ -325,9 +325,9 @@ It's recommendable to cross-build multi-arch images for Linux and Windows on Lin
 For Windows however using Hyper-V isolation to build multi-arch images comes with many drawbacks described above and isn't always possible depending on your infrastructure or CI system. Therefore if you want to provide multi-arch Windows images you should consider refactoring your Dockerfiles to support cross-building on Linux.
 
 **Tips to avoid `RUN` commands in the target platform stages to enable/optimize cross-building:**
-- For platforms/frameworks with support for cross-compiling use a build stage running on the build platform to build binaries for your target platform stage and copy them there.
+- For platforms/frameworks with support for cross-compiling use a build stage running on the build platform to build binaries for your target platform stage and copy them there. This is shown in example (a) in the [TL;DR section](#tldr).
 - You don't always need to do the build within a build stage. If you already have an environment set up to generate binaries for different target platforms you can just `COPY` them to the target platform stage from the local file system.
-- For images based on hosted pre-compiled binaries, use a build stage running on the build platform to download and extract them and copy them to the target platform stage.
+- For images based on hosted pre-compiled binaries, use a build stage running on the build platform to download and extract them and copy them to the target platform stage. This is shown in example (b) in the [TL;DR section](#tldr).
 - Installation scripts or installers often do nothing else than downloading some files. They often have parameters to set the platform for the files to download so you can run them in the build stage and just copy the needed paths to the target platform stage.
 - Linux: There are cross-compilation helpers like [`tonistiigi/xx`](https://github.com/tonistiigi/xx) that help you set up the right environment for cross-compiling, installing dependencies etc. in your build stage running on the build platform.
 - Linux: For minimal Linux images using `scratch` often doesn't work because it's missing CA certificates or non-root users. While you could copy them to a target platform stage yourself, you could also use [`distroless` images](https://github.com/GoogleContainerTools/distroless)
