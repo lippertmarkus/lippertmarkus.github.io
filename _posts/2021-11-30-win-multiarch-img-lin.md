@@ -18,7 +18,7 @@ You can cross-build multi-arch Windows images on Linux using BuildKit as long as
 Try to move the plumbing that requires `RUN` instructions (like cross-compiling, downloading binaries/libs/dependencies, creating directory structures/configs etc.) to a Linux build stage and copy the results over to the Windows image. Examples:
 
 1. Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image
-    ```Dockerfile
+    ```dockerfile
     ARG WINBASE
     FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
     WORKDIR /src
@@ -30,7 +30,7 @@ Try to move the plumbing that requires `RUN` instructions (like cross-compiling,
     COPY --from=build /src/app/dotnet.exe app.exe
     ```
 1. traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image
-    ```Dockerfile
+    ```dockerfile
     ARG WINBASE
     FROM --platform=$BUILDPLATFORM curlimages/curl:7.80.0 AS build
     WORKDIR /src
