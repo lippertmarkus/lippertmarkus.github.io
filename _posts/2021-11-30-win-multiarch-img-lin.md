@@ -17,7 +17,7 @@ You can cross-build multi-arch Windows images on Linux using BuildKit as long as
 
 Try to move the plumbing that requires `RUN` instructions (like cross-compiling, downloading binaries/libs/dependencies, creating directory structures/configs etc.) to a Linux build stage and copy the results over to the Windows image. Examples:
 
-1. Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image
+(a) Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image
 
 ```dockerfile
 ARG WINBASE
@@ -31,7 +31,7 @@ ENTRYPOINT [ "app.exe" ]
 COPY --from=build /src/app/dotnet.exe app.exe
 ```
 
-2. traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image
+(b) traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image
 
 ```dockerfile
 ARG WINBASE
@@ -45,7 +45,7 @@ ENTRYPOINT [ "traefik.exe" ]
 COPY --from=build /src/traefik.exe traefik.exe
 ```
 
-3. Pull external dependencies from single-arch images and copy to Windows image
+(c) Pull external dependencies from single-arch images and copy to Windows image
 
 ```Dockerfile
 ARG WINBASE
@@ -253,7 +253,7 @@ ADD https://www.python.org/ftp/python/3.11.0/python-3.11.0a2-amd64.exe python.ex
 RUN ["python.exe", "/quiet"]
 ```
 
-It's important to understand that there are not many cases where Hyper-V isolation is really needed instead of cross-building. To enable cross-building for this specific case here you could try extracting files from the installer in a Linux build stage. Another way would be to build this image natively on Windows a single time as a single-arch image and use it in your cross-build to copy `C:\python` to the target Windows stage similarly to the third example in the [TL;DR section](#tldr). I describe some tips on how to avoid using Hyper-V isolation [later](#conclusion) in this post.
+It's important to understand that there are not many cases where Hyper-V isolation is really needed instead of cross-building. To enable cross-building for this specific case here you could try extracting files from the installer in a Linux build stage. Another way would be to build this image natively on Windows a single time as a single-arch image and use it in your cross-build to copy `C:\python` to the target Windows stage similarly to the example (c) in the [TL;DR section](#tldr). I describe some tips on how to avoid using Hyper-V isolation [later](#conclusion) in this post.
 
 As [BuildKit doesn't work on Windows](https://docs.docker.com/develop/develop-images/build_enhancements/#limitations) you would need to use the default `docker build` command instead with Hyper-V isolation enabled to create the Windows container images:
 ```powershell
@@ -332,7 +332,7 @@ For Windows however using Hyper-V isolation to build multi-arch images comes wit
 - Linux: There are cross-compilation helpers like [`tonistiigi/xx`](https://github.com/tonistiigi/xx) that help you set up the right environment for cross-compiling, installing dependencies etc. in your build stage running on the build platform.
 - Linux: For minimal Linux images using `scratch` often doesn't work because it's missing CA certificates or non-root users. While you could copy them to a target platform stage yourself, you could also use [`distroless` images](https://github.com/GoogleContainerTools/distroless)
 - Windows: If you use MSI installers which only extract files to a certain location, you can try using [`msitools`](https://wiki.gnome.org/msitools) to extract the files and copy them to the target platform stages.
-- Windows: When you have no alternatives and need to run Windows programs, installers or things like [Chocolatey](https://chocolatey.org/) you can also natively build a single-arch image where you run those things once. In your cross-builds on Linux you can copy the resulting directories from that image to the Windows target stage. This also makes sure that your dependencies are locked to a known-working version. This is shown in the third example in the [TL;DR section](#tldr).
+- Windows: When you have no alternatives and need to run Windows programs, installers or things like [Chocolatey](https://chocolatey.org/) you can also natively build a single-arch image where you run those things once. In your cross-builds on Linux you can copy the resulting directories from that image to the Windows target stage. This also makes sure that your dependencies are locked to a known-working version. This is shown in the example (c) in the [TL;DR section](#tldr).
 
 
 ## Further reading
