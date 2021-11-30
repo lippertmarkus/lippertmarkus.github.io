@@ -15,7 +15,7 @@ One solution that many don't seem to know is to build multi-arch Windows images 
 
 You can cross-build multi-arch Windows images on Linux using BuildKit as long as you don't need to execute Windows commands on the Windows image (no `RUN` instructions in the Windows stage of the Dockerfile). All other instructions can be used like normally.
 
-Try to move the plumbing that requires `RUN` instructions (like cross-compiling, downloading binaries/libs/dependencies, creating directory structures/configs etc.) to a Linux build stage and copy the results over to the Windows image. Examples:
+Most Dockerfiles for Windows images can be refactored to benefit from cross-building. The idea is to move the plumbing that requires `RUN` instructions (like cross-compiling, downloading binaries/libs/dependencies, creating directory structures/configs etc.) to a Linux build stage and copy the results over to the Windows image. Examples:
 
 (a) Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image:
 
@@ -54,7 +54,7 @@ ENTRYPOINT [ "wins.exe", "-v" ]
 COPY --from=sigwindowstools/kube-proxy:v1.22.4-1809 /utils .
 ```
 
-More examples like for cross-building multi-arch Windows images for Go and Rust applications can be found [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples).
+More examples like for cross-building multi-arch Windows images for Go and Rust applications can be found [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples). At the end of this post [you can find tips](#conclusion) on how to refactor to enable cross-building for your Windows images.
 
 You can build these Dockerfiles on Linux with Buildkit for all six different Windows versions, create a manifest list and annotate the Windows version for each image in the list with the following script:
 ```bash
@@ -336,6 +336,7 @@ For Windows however using Hyper-V isolation to build multi-arch images comes wit
 
 
 ## Further reading
+- Repository with presented examples and scripts [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images)
 - Peri Thompson's [blog post about the same topic](https://perithompson.netlify.app/blog/creating-multiarch-containers/) as big inspiration for this blog post
 - SIG Windows using cross-building for easily creating [flannel](https://github.com/kubernetes-sigs/sig-windows-tools/blob/master/kubeadm/flannel/Dockerfile) and [kube-proxy](https://github.com/kubernetes-sigs/sig-windows-tools/blob/master/kubeadm/kube-proxy/Dockerfile) Windows images on Linux
 - [Issue for BuildKit Windows Support on GitHub](https://github.com/microsoft/Windows-Containers/issues/34)
