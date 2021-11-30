@@ -19,40 +19,40 @@ Try to move the plumbing that requires `RUN` instructions (like cross-compiling,
 
 1. Cross-compile [.NET app](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples/dotnet) on Linux and copy to Windows image
 
-    ```dockerfile
-    ARG WINBASE
-    FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
-    WORKDIR /src
-    COPY . .
-    RUN dotnet publish -c release -o app -r win10-x64 --self-contained true /p:PublishTrimmed=true /p:PublishReadyToRun=true /p:PublishSingleFile=true
+```dockerfile
+ARG WINBASE
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish -c release -o app -r win10-x64 --self-contained true /p:PublishTrimmed=true /p:PublishReadyToRun=true /p:PublishSingleFile=true
 
-    FROM ${WINBASE}
-    ENTRYPOINT [ "app.exe" ]
-    COPY --from=build /src/app/dotnet.exe app.exe
-    ```
+FROM ${WINBASE}
+ENTRYPOINT [ "app.exe" ]
+COPY --from=build /src/app/dotnet.exe app.exe
+```
 
 2. traefik: Download [pre-compiled binary](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/blob/main/windows-examples/traefik/Dockerfile), prepare on Linux and copy to Windows image
 
-    ```dockerfile
-    ARG WINBASE
-    FROM --platform=$BUILDPLATFORM curlimages/curl:7.80.0 AS build
-    WORKDIR /src
-    RUN curl -Lo traefik.zip https://github.com/traefik/traefik/releases/download/v2.5.4/traefik_v2.5.4_windows_amd64.zip ; \
-        unzip traefik.zip
+```dockerfile
+ARG WINBASE
+FROM --platform=$BUILDPLATFORM curlimages/curl:7.80.0 AS build
+WORKDIR /src
+RUN curl -Lo traefik.zip https://github.com/traefik/traefik/releases/download/v2.5.4/traefik_v2.5.4_windows_amd64.zip ; \
+    unzip traefik.zip
 
-    FROM ${WINBASE}
-    ENTRYPOINT [ "traefik.exe" ]
-    COPY --from=build /src/traefik.exe traefik.exe
-    ```
+FROM ${WINBASE}
+ENTRYPOINT [ "traefik.exe" ]
+COPY --from=build /src/traefik.exe traefik.exe
+```
 
 3. Pull external dependencies from single-arch images and copy to Windows image
 
-    ```Dockerfile
-    ARG WINBASE
-    FROM ${WINBASE}
-    ENTRYPOINT [ "wins.exe", "-v" ]
-    COPY --from=sigwindowstools/kube-proxy:v1.22.4-1809 /utils .
-    ```
+```Dockerfile
+ARG WINBASE
+FROM ${WINBASE}
+ENTRYPOINT [ "wins.exe", "-v" ]
+COPY --from=sigwindowstools/kube-proxy:v1.22.4-1809 /utils .
+```
 
 More examples like for cross-building multi-arch Windows images for Go and Rust applications can be found [on GitHub](https://github.com/lippertmarkus/cross-building-windows-and-linux-multi-arch-images/tree/main/windows-examples).
 
