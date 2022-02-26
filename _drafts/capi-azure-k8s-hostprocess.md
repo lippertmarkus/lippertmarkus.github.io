@@ -8,7 +8,7 @@ export EXP_MACHINE_POOL=true
 export EXP_CLUSTER_RESOURCE_SET=true
 ```
 
-generate cluster with template:
+generate cluster with template (TODO REPLACE WITH FLAVOR PARAMETER):
 ```bash
 $ wget https://raw.githubusercontent.com/kubernetes-sigs/cluster-api-provider-azure/main/templates/cluster-template-machinepool-windows-containerd.yaml
 $ clusterctl generate cluster mycluster --kubernetes-version v1.22.3 --control-plane-machine-count=1 --worker-machine-count=1 --from cluster-template-machinepool-windows-containerd.yaml > mycluster.yaml
