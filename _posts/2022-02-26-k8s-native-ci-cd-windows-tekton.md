@@ -9,7 +9,7 @@ Kubernetes-native CI/CD systems build upon containers and Kubernetes as a runtim
 
 The number of Kubernetes-native CI/CD systems in the [CNCF](https://landscape.cncf.io/category=continuous-integration-delivery&format=card-mode&grouping=category) and the [CDF](https://landscape.cd.foundation/card-mode?category=ci-pipeline-orchestration&grouping=category) Landscape is limited. When looking for Windows container support, only [Argo Workflows](https://argoproj.github.io/projects/argo) and [Tekton](https://tekton.dev/) are viable options.
 
-I already looked at Windows container support of Argo Workflows in [a previous post]({% post_url 2020-10-15-cloud-native-ci-cd-windows-argo.md %}). It has further improved since then but recently also Tekton added support for Windows Containers providing us with a second option to choose from. Tekton is a cloud-native solution for building CI/CD pipelines with a focus on flexibility, reusability, extensibility & scalability.
+I already looked at Windows container support of Argo Workflows in [a previous post]({% post_url 2020-10-15-cloud-native-ci-cd-windows-argo %}). It has further improved since then but recently also Tekton added support for Windows Containers providing us with a second option to choose from. Tekton is a cloud-native solution for building CI/CD pipelines with a focus on flexibility, reusability, extensibility & scalability.
 
 ## TL;DR
 
