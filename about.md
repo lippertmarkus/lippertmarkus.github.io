@@ -4,7 +4,7 @@ title: About
 bigimg: /img/about-big.jpg
 ---
 
-This is the personal blog of Markus Lippert. I'm a technology enthusiast living near Ulm, a city in the south of Germany. I currently work for [COSMO CONSULT](https://cosmoconsult.com) as a DevOps Engineer.
+This is the personal blog of Markus Lippert. I'm a technology enthusiast living near Ulm, a city in the south of Germany. I currently work for [COSMO CONSULT](https://cosmoconsult.com) as a Lead DevOps Engineer.
 
 I mostly write about DevOps, Containers, Orchestration, Cloud-native, IaC and Azure. Refer to my [GitHub profile](https://github.com/lippertmarkus) if you want to know more about the technologies I work with and what I'm currently doing in the open-source space. In my [LinkedIn profile](https://www.linkedin.com/in/lippertmarkus/) you can find information around my career, professional experience and past projects.
 
