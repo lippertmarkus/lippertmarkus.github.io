@@ -187,7 +187,19 @@ crane manifest lippertmarkus/test-crane:1.0
 }
 ```
 
-Each manifest is annotated with the Windows version to allow the container runtime to pick the right image for the Windows container host.
+Each manifest is annotated with the Windows version to allow the container runtime to pick the right image for the Windows container host:
+
+```bash
+$ docker run --rm  lippertmarkus/test-crane:1.0
+Unable to find image 'lippertmarkus/test-crane:1.0' locally
+1.0: Pulling from lippertmarkus/test-crane
+0179e587c053: Pull complete
+7ed58b62fa11: Pull complete
+Digest: sha256:fc0a5f7d37d4fb6a0c331789fffd75658260119e659c668d88d31eafc16604cb
+Status: Downloaded newer image for lippertmarkus/test-crane:1.0
+
+Hello World!
+```
 
 Comparing the latter two image manifests we can see they only differ in the referenced base image and image configuration but share the same application layer with the .NET app in it:
 ```
