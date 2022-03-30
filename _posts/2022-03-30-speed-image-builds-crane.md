@@ -45,9 +45,11 @@ Read on to learn more about how `crane` works.
 [`crane`](https://github.com/google/go-containerregistry/tree/main/cmd/crane) is a tool for interacting with remote images and registries. It can be used to inspect images but also to mutate images through adding files or changing their configuration like the entrypoint or the user.
 
 Let's use it to look at how an image is stored in the registry:
-```json
-> crane manifest lippertmarkus/test-crane:1.0-1909
+```powershell
+crane manifest lippertmarkus/test-crane:1.0-1909
+```
 
+```json
 {
     "schemaVersion": 2,
     "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
@@ -77,9 +79,12 @@ Let's use it to look at how an image is stored in the registry:
 The image is defined as a manifest. The manifest references a series of layers the image consists of. In the example we can see that `nanoserver` is used as a base image from the Microsoft container registry. There's another layer on top that in our case contains the application. Each layer only consists of added or changed files different to its parent layer. When targeting different Windows versions, only the base layer changes and the application layer usually stays the same. Each layer is just a compressed tar archive with a special directory layout containing the files that are different to the parent layer.
 
 The digest referenced in the `config` property contains the configuration of the image. It holds some additional information like the layer history, the OS and architecture as well as settings like the entrypoint or the user:
-```json
-> crane config lippertmarkus/test-crane:1.0-1909
 
+```powershell
+crane config lippertmarkus/test-crane:1.0-1909
+```
+
+```json
 {
     "architecture": "amd64",
     "created": "2021-05-04T21:22:59.0761106Z",
@@ -140,9 +145,11 @@ This can easily be done for multiple base images by the script shown in the [TL;
 
 The manifest list created by the [script](#tldr) references all the image manifests we pushed before:
 
-```json
-> crane config lippertmarkus/test-crane:1.0
+```powershell
+crane config lippertmarkus/test-crane:1.0
+```
 
+```json
 {
    "schemaVersion": 2,
    "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
@@ -184,8 +191,8 @@ Each manifest is annotated with the Windows version to allow the container runti
 
 Comparing the latter two image manifests we can see they only differ in the referenced base image and image configuration but share the same application layer with the .NET app in it:
 ```
-> crane manifest lippertmarkus/test-crane@sha256:fefae09d4b87f6d59547d7b0c8ebcea18fc8a4fb9311adcfa741fb97a274cec0
-> crane manifest lippertmarkus/test-crane@sha256:e86489b07a160f9c48fbd20c8ae0f680288c162c0f376c8034ed7c314fbe64ea
+crane manifest lippertmarkus/test-crane@sha256:fefae09d4b87f6d59547d7b0c8ebcea18fc8a4fb9311adcfa741fb97a274cec0
+crane manifest lippertmarkus/test-crane@sha256:e86489b07a160f9c48fbd20c8ae0f680288c162c0f376c8034ed7c314fbe64ea
 ```
 
 <div class="center" markdown="1">
