@@ -11,6 +11,10 @@ You certainly already heard about the [licensing changes for Docker Desktop](htt
 
 Docker provides the standalone Windows binaries for the Docker Daemon as well as the Docker CLI. Those are a bit hidden and not easy to find. You can just download them, put them in your `PATH`, register the Docker Daemon as a service, start it and run your Windows containers like you're used to. For that you need to execute the following PowerShell commands as admin:
 ```powershell
+# Optionally enable required Windows features if needed
+Enable-WindowsOptionalFeature -Online -FeatureName containers –All
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V –All
+
 curl.exe -o docker.zip -LO https://download.docker.com/win/static/stable/x86_64/docker-20.10.13.zip 
 Expand-Archive docker.zip -DestinationPath C:\
 [Environment]::SetEnvironmentVariable("Path", "$($env:path);C:\docker", [System.EnvironmentVariableTarget]::Machine)
