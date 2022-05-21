@@ -1,6 +1,7 @@
 ---
 title: "Deploy your .NET apps faster with konet"
 image: "/img/thumbnails/konet.png"
+share-img: "/img/thumbnails/konet.png"
 bigimg: "/img/flight-cloud.jpg"
 tags: [Containers,DevOps,Programming,Windows,Kubernetes,.NET]
 ---
