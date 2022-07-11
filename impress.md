@@ -1,6 +1,7 @@
 ---
 title: "Impress"
 sitemap: false
+noindex: true
 ---
 
 ## Legal Disclosure
