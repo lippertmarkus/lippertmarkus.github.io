@@ -3,6 +3,5 @@ layout: null
 ---
 
 User-agent: *
-Disallow: {% link impress.md %}
 Disallow: {% link privacy-policy.md %}
 Sitemap: {{ site.url }}/sitemap.xml
