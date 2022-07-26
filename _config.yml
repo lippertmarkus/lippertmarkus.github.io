@@ -20,8 +20,8 @@ url: "https://lippertmarkus.com"
 
 # List of links in the navigation bar
 navbar-links:
-  Tags: "tags"
   Presentations: presentations
+  Tags: "tags"
   About Me: "about"
 
 footer-links:
