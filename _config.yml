@@ -22,6 +22,7 @@ url: "https://lippertmarkus.com"
 navbar-links:
   Tags: "tags"
   About Me: "about"
+  Presentations: presentations
 
 footer-links:
   Impress: "impress"
