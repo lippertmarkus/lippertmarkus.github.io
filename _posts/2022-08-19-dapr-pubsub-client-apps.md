@@ -193,6 +193,6 @@ INFO[0002] dapr initialized. Status: Running. Init Elapsed 2275.1313ms  app_id=d
 
 ## Conclusion
 
-Dapr is great with simplifying challenges around microservice architectures. If you're already using Dapr for your service-to-service communications and want to extend this onto client applications, you should look at the described way to stay consistent.
+Dapr is great with simplifying challenges around microservice architectures. If you're already using Dapr for your service-to-service communications and want to extend this onto client applications, you should look at the described way to stay consistent. You can find the full source code of the example [on GitHub](https://github.com/lippertmarkus/dapr-clientside/tree/main).
 
 The limitation of this approach is that it gives you the abstractions and decoupling on the server side only, but it's still better than not having it on both sides or needing to implement it on your own. The approach can certainly be extended to be more decoupled on the client side as well and to add support e.g. for tracing.
