@@ -35,7 +35,7 @@ If you can't work around those limitations you can run the Docker Daemon in a [H
         spec:
           containers:
           - name: dockerd
-            image: lippertmarkus/docker:v20.10.14-1809
+            image: lippertmarkus/dockerd:20.10.23
           securityContext:
             windowsOptions:
               hostProcess: true
@@ -120,6 +120,29 @@ While there are quite a few options for building Linux container images, the onl
 
 If you can't live with those limitations and don't want to wait [until BuildKit supports building Windows images](https://github.com/microsoft/Windows-Containers/issues/34) there's another option. Now with [HostProcess containers]({% post_url 2021-11-05-k8s-win22-hostprocess %}) graduating to Beta with Kubernetes 1.23 using Docker as a third, but more unsecure option got easier. Also before HostProcess containers you could just run the Docker daemon next to containerd, but using HostProcess containers is of course way more elegant than adapting VM images or permanently installing Docker on the host.
 
+## Creating a container image for the Docker daemon
+
+There's a [minimal base image](https://github.com/microsoft/windows-host-process-containers-base-image) available specifically for HostProcess containers. Please note that Windows Container images based on this base image can currently only be [built on Linux with BuildKit](https://lippertmarkus.com/2021/11/30/win-multiarch-img-lin/).
+
+The `Dockerfile` looks like the following:
+```Dockerfile
+FROM --platform=$BUILDPLATFORM curlimages/curl:7.80.0 AS build
+ARG DOCKERVERSION
+USER root
+RUN curl -Lo docker.zip https://download.docker.com/win/static/stable/x86_64/docker-$DOCKERVERSION.zip; \
+    unzip docker.zip
+
+FROM mcr.microsoft.com/oss/kubernetes/windows-host-process-containers-base-image:v1.0.0
+WORKDIR /docker
+ENTRYPOINT ["dockerd.exe"]
+COPY --from=build /docker /docker
+```
+
+To build the container image with BuildKit on Linux use:
+```bash
+docker buildx create --name img-builder --use --driver docker-container --driver-opt image=moby/buildkit
+docker buildx build --platform windows/amd64 --build-arg DOCKERVERSION=20.10.23 --push --pull -t lippertmarkus/dockerd:20.10.23 .
+```
 
 ## Running the Docker daemon in a HostProcess container
 
@@ -144,7 +167,7 @@ spec:
     spec:
       containers:
       - name: dockerd
-        image: lippertmarkus/docker:v20.10.14-1809
+        image: lippertmarkus/dockerd:20.10.23
       securityContext:
         windowsOptions:
           hostProcess: true
