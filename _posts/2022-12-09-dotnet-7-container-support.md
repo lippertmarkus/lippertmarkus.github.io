@@ -5,7 +5,7 @@ bigimg: "/img/dotnet7-christmas.jpg"
 tags: [Containers,DevOps,Programming,Windows,Kubernetes,.NET]
 ---
 
-Earlier this year [I already wrote]({% post_url 2022-05-21-dotnet-konet %}) about the importance of reducing the time from development to deployment and how CI/CD processes can benefit from an lightweight and fast process that doesn't depend on container runtimes like Docker or maintenance of Dockerfiles. I introduced `konet` to achieve exactly that in the .NET world and just three months later it turned out that the .NET team at Microsoft had [a very similar idea](https://devblogs.microsoft.com/dotnet/announcing-builtin-container-support-for-the-dotnet-sdk/) (and they even refered to `konet`!).
+Earlier this year [I wrote]({% post_url 2022-05-21-dotnet-konet %}) about the importance of reducing the time from development to deployment and how CI/CD processes can benefit from an lightweight and fast process that doesn't depend on container runtimes like Docker or maintenance of Dockerfiles. I introduced `konet` to achieve exactly that in the .NET world and just three months later it turned out that the .NET team at Microsoft had [a very similar idea](https://devblogs.microsoft.com/dotnet/announcing-builtin-container-support-for-the-dotnet-sdk/) (and they even refered to `konet`!).
 
 ## TL;DR
 
