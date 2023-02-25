@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: azure-pipelines-setup
+spec:
+  activeDeadlineSeconds: 300
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 600
+  template:
+    spec:
+      restartPolicy: Never
+      activeDeadlineSeconds: 240
+      containers:
+        - name: azure-pipelines-agent
+          # image is created like described in https://keda.sh/docs/2.9/scalers/azure-pipelines/#configuring-the-agent-container
+          # don't forget the mentioned script change as well as mine
+          image: lippertmarkus/azure-pipelines-agent:latest
+          imagePullPolicy: Always
+          env:
+            - name: AZP_AGENT_NAME
+              value: setup-template
+            - name: AZP_URL
+              value: https://dev.azure.com/<org>
+            - name: AZP_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: pipeline-auth
+                  key: personalAccessToken
+            # - name: AZP_POOL
+            #   value: Default  # same as in the ScaledJob
