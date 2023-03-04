@@ -28,28 +28,9 @@ Docker then greets you with *Hello from Docker!*. Now on to the Linux containers
 
 ## Linux Containers
 
-For Linux containers you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install) or you can use an already existing Ubuntu distribution. Before you can install Docker you need to [enable systemd with a little hack](https://forum.snapcraft.io/t/running-snaps-on-wsl2-insiders-only-for-now/13033) (**Update:** I also had success enabling systemd with [distrod](https://github.com/nullpo-head/wsl-distrod) which seems like a less hacky solution):
-```bash
-sudo apt-get update
-sudo apt install -yqq fontconfig daemonize
-sudo vi /etc/profile.d/00-wsl2-systemd.sh
-```
+For Linux containers you can install the Docker Daemon in WSL2. Installing WSL is explained [here](https://docs.microsoft.com/en-us/windows/wsl/install) or you can use an already existing Ubuntu distribution. Before you can install Docker you need to enable systemd. For this please install [**the Windows Store Version** of WSL](https://devblogs.microsoft.com/commandline/a-preview-of-wsl-in-the-microsoft-store-is-now-available/#how-to-install-and-use-wsl-in-the-microsoft-store) and afterwards [enable systemd in the distro settings](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/#how-can-you-get-systemd-on-your-machine) and reboot the WSL distro..
 
-Add the following to the file to start systemd on startup:
-```bash
-SYSTEMD_PID=$(ps -efw | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
- 
-if [ -z "$SYSTEMD_PID" ]; then
-   sudo /usr/bin/daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
-   SYSTEMD_PID=$(ps -efw | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
-fi
- 
-if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
-    exec sudo /usr/bin/nsenter -t $SYSTEMD_PID -a su - $LOGNAME
-fi
-```
-
-Now exit and re-enter WSL to have systemd available and install Docker normally like explained [in the docs](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository). Here are the commands: 
+Now re-enter WSL to have systemd available and install Docker normally like explained [in the docs](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository). Here are the commands: 
 
 ```bash
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
